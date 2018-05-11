@@ -415,7 +415,7 @@ footer h4 {
     text-align: left;
     font-weight: normal;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 footer p {
@@ -445,10 +445,43 @@ footer p {
     box-sizing: border-box;
 }
 
-#social span {color: var(--lightColor);}
-
 #social .colunas {margin-bottom: 1em;}
 
+#ctc {cursor: pointer;}
+
+.tooltip-text {
+    visibility: hidden;
+    position: relative;
+    background: #00ff8b;
+    border-radius: .4em;
+    top: -3.5rem;
+    font-size: 90%;
+    color: var(--midColor);
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+    padding: 7px;
+}
+
+#ctc:hover .tooltip-hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text::after {
+    content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 0.625em solid transparent;
+	border-top-color: #00ff8b;
+	border-bottom: 0;
+	margin-left: -0.625em;
+	margin-bottom: -0.625em;
+}
+
+.visible {visibility: visible; opacity: 1;}
 
 /***************************************************/
 /***************** MEDIA QUERIE ********************/

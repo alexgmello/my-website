@@ -542,8 +542,6 @@ footer p {
 
 @media screen and (max-width: 824px) {
     .fixed-bottom {position: static;}
-
-    /* #social a {font-size: 17px;} */
 }
 
 @media screen and (max-width: 806px) {
@@ -669,9 +667,9 @@ footer p {
     #svList li {width:33.33%;}
 
     #svBox {
-	width: 100%;
-	max-width: 100%;
-	font-size: 100%;
+        width: 100%;
+        max-width: 100%;
+        font-size: 100%;
     }
 
     .svTitle {font-size: 1.5em;}

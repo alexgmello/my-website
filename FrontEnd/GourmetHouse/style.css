@@ -1,0 +1,400 @@
+body {
+    margin: 0;
+    background-color: #ddd;
+    font-family: Trebuchet MS;
+}
+
+img {
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: normal;
+    margin-top: 65px;
+    margin-bottom: 0px;
+    font-family: 'KillTheLights';
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #8c0000;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-family: 'KillTheLights';
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #8c0000;
+    margin-bottom: 10px;
+    font-family: 'KillTheLights';
+}
+
+p {
+    color: #888;
+}
+
+.btn-saibaMais {
+    text-decoration: none;
+    font-size: 14px;
+    color: #888;
+    border: 1px;
+    border-radius: 5px;
+    border-color: #999;
+    border-style: solid;
+    padding: 5px 17px;
+    display: inline-block;
+
+}
+
+.container {
+    max-width: 1000px;
+    width: 95%;
+    margin: auto;
+}
+
+.separador {
+    text-align: center;
+}
+
+.separador img {
+    clear: both;
+    margin: 30px auto;
+}
+
+/***************** TOPO ******************/
+
+#opacidade {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+}
+
+#txt-banner p {
+    color: #fff;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+}
+
+#logo {
+    margin: 40px 0;
+}
+
+#menu {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0px 28px;
+    font-family: 'KillTheLights';
+}
+
+#topo-mob {
+    display: none;
+}
+
+#banner-mob {
+    display: none;
+}
+
+/***************** PRINCIPAL ******************/
+
+#principal-esq {
+    float: left;
+    width: 45%;
+}
+
+#principal-dir {
+    float: right;
+    width: 45%;
+}
+
+#principal-esq img, #principal-dir img {
+    width: 100%;
+}
+
+/***************** SECUNDARIA ******************/
+
+#secundaria article {
+    float: left;
+    width: 22%;
+    margin-right: 4%;
+}
+
+#secundaria img {
+    width: 100%;
+}
+
+#secundaria article:last-child {
+    margin-right: 0;
+}
+
+#secundaria article p {
+    font-size: 14px;
+}
+
+/***************** RODAPE ******************/
+
+#rodape {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+/***************** MEDIA QUERIE ******************/
+
+@media screen and (max-width: 1280px) {
+
+    #logo {
+        margin: 30px 0;
+    }
+
+    #txt-banner {
+        margin-top: 30px;
+    }
+}
+
+/*****************************************/
+
+@media screen and (max-width:1000px) {
+
+    #opacidade .separador {
+        display: none;
+    }
+
+    #txt-banner h1 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    #menu a {
+        margin: 0 15px;
+    }
+}
+
+/*****************************************/
+
+@media screen and (max-width:767px){
+
+    .separador img {
+        width: 80%;
+        height: auto;
+    }
+
+/**** TOPO ***/
+
+    #opacidade {
+        display: none;
+    }
+
+    #topo-mob {
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        background-image: url(img/topo-mob.jpg);
+        /*background-repeat: repeat-x;
+        background-size:auto 60px; */
+    }
+
+    #logo-mob img {
+        margin-bottom: 10px;
+    }
+
+    #menu-mob {
+        display: none;
+    }
+
+    #menu-mob a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 0;
+        background-color: rgba(0, 0, 0, 0.44);
+        border-bottom: 1px solid #666;
+        font-family: 'KillTheLights';
+    }
+
+    #menu-mob a:last-child {
+        border: none;
+    }
+
+    #btn-menu {
+        position: absolute;
+        right: 10px;
+        top: 32px;
+        margin-right: 2%;
+    }
+
+    .barra-1, .barra-2, .barra-3 {
+        width: 30px;
+        height: 5px;
+        background-color: #fff;
+        margin-bottom: 2px;
+        transition: 0.5s;
+    }
+
+    .fechar .barra-2 {
+        opacity: 0;
+    }
+
+    .fechar .barra-1 {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .fechar .barra-3 {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    #banner {
+        display: none;
+    }
+
+    #banner-mob {
+        display: block;
+    }
+
+    #banner-mob img {
+        width: 100%;
+        height: auto;
+    }
+
+/*** PRINCIPAL ***/
+
+    #principal-esq {
+        float: left;
+        width: 45%;
+    }
+
+    #principal-dir {
+        float: right;
+        width: 45%;
+    }
+
+/*** SECUNDARIA ***/
+
+    #secundaria article {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 47%;
+    }
+
+    /*a cada 2 colunas (2n), a partir da segunda (+2)*/
+    #secundaria article:nth-child(2n+2) {
+        float: right;
+    }
+
+/*** RODAPE ***/
+
+    #rodape {
+        font-size: 12px;
+    }
+}
+
+/*****************************************/
+
+@media screen and (max-width:419px){
+
+    .separador img {
+        width: 80%;
+        height: auto;
+    }
+
+/*** TOPO ***/
+
+    #opacidade {
+        display: none;
+    }
+
+    #topo-mob {
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        background-image: url(img/topo-mob.jpg);
+        /*background-repeat: repeat-x;
+        background-size:auto 60px; */
+    }
+
+    #logo-mob {
+    }
+
+    #logo-mob img {
+        width: 60%;
+        height: auto;
+    }
+
+    #btn-menu {
+        top: 27px;
+    }
+
+    #menu-mob {
+        background-color: ;
+    }
+
+    #menu-mob a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 3px;
+        font-family: 'KillTheLights';
+    }
+
+    #banner {
+        display: none;
+    }
+
+    #banner-mob {
+        display: block;
+    }
+
+    #banner-mob img {
+        width: 100%;
+        height: auto;
+    }
+
+/*** PRINCIPAL ***/
+
+    #principal-esq {
+        float: none;
+        width: 100%;
+    }
+
+    #principal-dir {
+        float: none;
+        width: 100%;
+    }
+
+/*** SECUNDARIA ***/
+
+    #secundaria article {
+        float: none;
+        width: 100%;
+    }
+
+/*** RODAPE ***/
+
+    #rodape {
+        font-size: 12px;
+    }
+}
+
+/*****************************************/
+

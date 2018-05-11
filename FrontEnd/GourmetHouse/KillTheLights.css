@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'KillTheLights';
+    src: url('fonts/KillTheLights.eot');
+    src: url('fonts/KillTheLights.eot') format('embedded-opentype'),
+         url('fonts/KillTheLights.woff2') format('woff2'),
+         url('fonts/KillTheLights.woff') format('woff'),
+         url('fonts/KillTheLights.ttf') format('truetype'),
+         url('fonts/KillTheLights.svg#KillTheLights') format('svg');
+}

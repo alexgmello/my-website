@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tópico 4</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jdropwords.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+    <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="js/jdropwords.js"></script>
+
+	<script>
+		$(function(){
+            $('#dropwords').jDropWords({
+                answers : {
+                    "P1" : "R1",
+                    "P2" : "R2",
+                    "P3" : "R3",
+                    "P4" : "R4",
+                    "P5" : "R5"
+                }
+            });
+
+            $('#dropwords1').jDropWords({
+                answers : {
+                    "P1" : "R1",
+                    "P2" : "R2",
+                    "P3" : "R3",
+                    "P4" : "R4",
+                    "P5" : "R5",
+                    "P6" : "R6",
+                    "P7" : "R7"
+                }
+            });
+
+			//onload --- ao carregar a pagina
+            $("#ativ-9").hide();
+            $("#ativ-10").hide();
+            $("#ativ-11").hide();
+
+            $("#infSix").on("click", function(){
+                $("#infSix h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            $("#infSeven").on("click", function(){
+                $("#infSeven h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+			//quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+				console.log("link clicado: " + valor);
+
+                //Intro
+                if(valor == "intro"){
+					$("#ativ-9, #ativ-10, #ativ-11").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //ativ-9
+                if(valor == "ativ-9"){
+					$("#intro, #ativ-10, #ativ-11").hide();
+					$("#ativ-9").fadeIn(500);
+				}
+
+                //ativ-10
+                if(valor == "ativ-10"){
+					$("#intro, #ativ-9, #ativ-11").hide();
+					$("#ativ-10").fadeIn(500);
+				}
+
+                //ativ-11
+                if(valor == "ativ-11"){
+					$("#intro, #ativ-9, #ativ-10").hide();
+					$("#ativ-11").fadeIn(500);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-2">
+            <!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+				<li><a href="#" data-value="ativ-9"><span><i class="fas fa-pencil-alt"></i></span> Activity 9</a></li>
+				<li><a href="#" data-value="ativ-10"><span><i class="fas fa-pencil-alt"></i></span> Activity 10</a></li>
+				<li><a href="#" data-value="ativ-11"><span><i class="fas fa-pencil-alt"></i></span> Activity 11</a></li>
+			</ul>
+        </div>
+
+        <div class="well col-xs-10">
+            <h1 class="page-header img-header">4. Lorem ipsum  consectetur adipisicing</h1>
+
+            <div id="intro">
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Lorem:</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta architecto ut similique accusantium modi.</p>
+                    <p>Recusandae beatae harum non minus optio, voluptatibus, soluta at perferendis animi asperiores numquam quia.</p>
+                </section>
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Ipsum:</h2>
+                    <h3>Lorem ipsum : Perferendis, animi.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis debitis, id? Omnis, error.</p>
+                    <p>Dolorum ad odio maxime, suscipit aut alias eligendi quam a maiores consectetur, aperiam!</p>
+                    <p>Nisi, sapiente enim eaque, dolore officia, iusto minus dolorem voluptates nam autem omnis.</p>
+                    <p>Fuga, dignissimos molestias! Tenetur, fugit provident rem minus! Id delectus, qui perspiciatis itaque!</p>
+                </section>
+            </div>
+
+            <div id="ativ-9">
+                <h3>Lorem ipsum dolor ex rem cum!</h3>
+
+                <section class="col-xs-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea magnam cum et praesentium maxime debitis fugit sunt.</p>
+                    <p>Repellat ad, labore magnam facilis harum, iure doloremque doloribus adipisci odit nostrum error repudiandae excepturi quos maxime.</p>
+                    <p>Fuga, placeat, beatae! Nesciunt eaque, nam accusamus est id quo minus facilis, dignissimos asperiores fugit, vero in.</p>
+                    <p>Ut pariatur, officia harum obcaecati repudiandae, nesciunt cum reiciendis voluptates eos facilis doloremque magni hic? Voluptatum, fugit.</p>
+                    <p>Architecto, a quibusdam esse. Eos magni, maiores ducimus iste, cumque aspernatur ab, debitis quisquam tenetur deleniti minus.</p>
+                    <p>Alias doloribus debitis, quas reprehenderit vero possimus. Totam autem doloribus officiis, earum accusantium error quis minus velit.</p>
+                    <p>Aliquam, aspernatur unde, omnis hic vel, tempore accusamus, consequatur beatae cum consequuntur earum mollitia. Praesentium officiis, nesciunt.</p>
+                    <p>Culpa aut natus dolorem nulla cumque a numquam ratione sit. Error iusto quas ut natus commodi quaerat.</p>
+                    <p>Ad aperiam expedita atque delectus ipsam neque repudiandae esse sit quo, nihil nulla deleniti quod tempore alias.</p>
+                    <p>Incidunt corporis perferendis iusto itaque repellendus at debitis recusandae! Culpa provident tempora eligendi possimus minima nobis libero.</p>
+                    <a href="http://www.aids.gov.br" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: Ministério da Saúde</h6></a>
+                </section>
+
+                <section class="col-xs-12">
+                    <p>Lorem fugiat eum officia libero perferendis. Perferendis aperiam quod perspiciatis assumenda.</p>
+                </section>
+
+                <section class="grupo-vt">
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> AZT blocks reverse transcriptase</h4>
+                        </div>
+
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+
+                        <div id="infSix" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseSix">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco Internacional de Objetos Educacionais (BIOE/MEC).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 2 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Howard Hughes Medical Institute.</p>
+                        </div>
+                    </div>
+
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4>
+                            <i class="fas fa-video fa-sm"></i> Protease inhibitor
+                        </h4>
+                        </div>
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+
+                        <div id="infSeven" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseSeven">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco Internacional de Objetos Educacionais (BIOE/MEC).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 1 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Howard Hughes Medical Institute.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 9: fill the blanks</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor non tempora recusandae laudantium.</p>
+                    <p>Word bank: lorem ipsum dolor sit amet, consectetur adipisicing iste tenetur hic ullam odio.</p>
+
+                    <div class="banco-palavras">
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> AIDS</li>
+                        <li><input id="checkBox" type="checkbox"> fusão</li>
+                        <li><input id="checkBox" type="checkbox"> receptor</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> antirretrovirais</li>
+                        <li><input id="checkBox" type="checkbox"> integrase</li>
+                        <li><input id="checkBox" type="checkbox"> RNA</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> DNA</li>
+                        <li><input id="checkBox" type="checkbox"> membrana</li>
+                        <li><input id="checkBox" type="checkbox"> timina</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> enzimas</li>
+                        <li><input id="checkBox" type="checkbox"> protease</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> transcriptase</li>
+                    </ul>
+                    </div>
+                </section>
+
+                <div class="col-xs-12">
+                    <p>Lorem ipsum dolor <input type="text" id="blank_a9"> sit amet, <input type="text" id="blank_b9"> consectetur adipisicing elit. Quos, sed <input type="text" id="blank_c9"> placeat aspernatur iure, <input type="text" id="blank_d9"> amet voluptas tempore. Doloribus, accusantium <input type="text" id="blank_e9"> repellat.</p>
+                    <p>Doloremque eius, <input type="text" id="blank_f9"> ratione beatae, magnam <input type="text" id="blank_g9"> excepturi omnis, quaerat cupiditate voluptas possimus minima cum numquam veritatis <input type="text" id="blank_h9"> est atque rem quos?</p>
+                    <p>Repudiandae velit, <input type="text" id="blank_i9"> necessitatibus qui <input type="text" id="blank_j9"> unde repellendus adipisci, a, fugit aut, odio facilis dolorem! Illo, ipsum. Delectus earum totam <input type="text" id="blank_k9"> facere!</p>
+                    <p>Ipsa asperiores <input type="text" id="blank_l9"> in voluptate, possimus, facilis reprehenderit eos, adipisci assumenda optio et sit <input type="text" id="blank_m9"> sed, vitae! Amet rem, id similique!</p>
+
+                    <p><input type="button" class="btn btn-default" value="Corrigir" onclick="t4_a9()"></p>
+                </div>
+            <div class="floatFix"></div>
+                </div>
+            </div>
+
+            <div id="ativ-10">
+                <section class="col-xs-12">
+                    <h3>Lorem magni pariatur</h3>
+                </section>
+
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 10: ordering the pieces</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quos. Voluptates perferendis eveniet, in, illo quidem sunt sapiente cumque sed:</p>
+                    </section>
+
+                    <div id="dropwords" class="jdropwords col-xs-12">
+                        <ul class="words grupo-vt">
+                            <li class="word" id="R3">Autem totam molestias,</li>
+                            <li class="word" id="R2">consectetur adipisicing elit.</li>
+                            <li class="word" id="R1">Lorem ipsum dolor sit amet,</li>
+                            <li class="word" id="R5">mollitia quaerat nihil molestiae.</li>
+                            <li class="word" id="R4">est itaque? Autem molestias,</li>
+                        </ul>
+
+                        <div class="blanks">
+                            <p><span class="blank" id="P1"></span> - <span class="blank" id="P2"></span> - <span class="blank" id="P3"></span> -  <span class="blank" id="P4"></span> - <span class="blank" id="P5"></span></p>
+                        </div>
+
+                        <div class="actions">
+                            <a class="btn btn-default reset">Restart</a>
+                            <a class="btn btn-default submit">Submit</a>
+                        </div>
+                    </div>
+                    <div class="floatFix"></div>
+                </div>
+            </div>
+
+            <div id="ativ-11">
+                <section class="col-xs-12">
+                    <h3>Autem eos beatae ut aliquido</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quos eum vitae vero blanditiis corporis totam molestiae aspernatur, sapiente fugit.</p>
+                    <p>Praesentium iusto esse, consectetur dolorem. Similique, quidem, aliquam. Eligendi nulla id ipsa ducimus vitae, numquam error qui deleniti hic reprehenderit.</p>
+                    <p>Ullam voluptatibus hic laborum rem ipsum voluptate distinctio, sint unde eaque ut voluptates officiis corporis deleniti velit ab repellendus asperiores.</p>
+                    <a href="http://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-2848-7-dezembro-1940-412868-normaatualizada-pe.html" class="card-subtitle mb-2 text-muted" style="text-align: right; display: inline-block; padding-right: 0; padding-left: 0; float: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: Código Penal Brasileiro</h6></a>
+                </section>
+                <div class="floatFix"></div>
+                <section class="col-xs-12">
+                    <p>Adipisci ut minus consequatur, distinctio delectus temporibus nostrum.</p>
+                </section>
+
+                <section class="grupo-vt">
+                    <div class="artigo">
+                        <div class="artigo-text">
+                            <a href="pdf/Artigo_5.pdf" target="_blank"><i class="fas fa-file-pdf fa-2x fa-fw"></i></a>
+                        </div>
+                        <div class="artigo-text">
+                        <a href="pdf/Artigo_5.pdf" target="_blank">Article 5: Truvada: A primeira quimioprofilaxia de pré-exposição aprovada contra a transmissão sexual do HIV</a>
+                        <a href="http://www.fmc.br/revista/V7N1P13-15.pdf" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: FMC</h6></a>
+                        </div>
+                    </div>
+                </section>
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 11: arrange the sentence</h5>
+                    <p>Odio ut aspernatur illum beatae dolorem labore aut dolore nemo perspiciatis veniam, ullam quos distinctio!</p>
+                </section>
+
+                <div id="dropwords1" class="jdropwords col-xs-12">
+                    <ul class="words grupo-vt">
+                        <li class="word" id="R6">adipisci dolore cumque</li>
+                        <li class="word" id="R2">sit amet,</li>
+                        <li class="word" id="R4">Error alias ea delectus</li>
+                        <li class="word" id="R1">Lorem ipsum dolor</li>
+                        <li class="word" id="R3">consectetur adipisicing elit.</li>
+                        <li class="word" id="R7">mollitia sed!</li>
+                        <li class="word" id="R5">iste ipsam provident</li>
+                    </ul>
+
+                    <div class="blanks">
+                        <p><span class="blank" id="P1"></span>
+                        <span class="blank" id="P2"></span>
+                        <span class="blank" id="P3"></span>
+                        <span class="blank" id="P4"></span>
+                        <span class="blank" id="P5"></span>
+                        <span class="blank" id="P6"></span>
+                        <span class="blank" id="P7"></span></p>
+                    </div>
+
+                    <div class="actions">
+                        <a class="btn btn-default reset">Restart</a>
+                        <a class="btn btn-default submit">Submit</a>
+                    </div>
+                </div>
+                    <div class="floatFix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/t4_a9.js"></script>
+</body>
+</html>

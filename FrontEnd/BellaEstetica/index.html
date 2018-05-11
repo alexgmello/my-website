@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Bella Estética</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ExpletusSansRegular.css">
+
+    <!--Nivo Slider-->
+    <link rel="stylesheet" href="nivo-slider/themes/default/default.css">
+    <link rel="stylesheet" href="nivo-slider/nivo-slider.css">
+
+    <script src="nivo-slider/jquery-1.11.1.min.js"></script>
+    <script src="nivo-slider/jquery.nivo.slider.js"></script>
+
+    <script>
+
+        $(window).load(function()
+        {
+            $('#banner').nivoSlider();
+
+            //-----fechar pop-ups-----//
+            $('.fechar,#opacidade').click(function()
+                {
+                    $('#pop-up,#opacidade,#quem-somos-popup').fadeOut(500);
+                });
+
+            //-----pop-up-----//
+            $('#pop-up,#opacidade').fadeIn(1000);
+
+            //-----quem somos-----//
+            $('#quem-somos').click(function()
+                {
+                $('#quem-somos-popup,#opacidade').fadeIn(1000);
+                });
+        });
+    </script>
+    <!---->
+</head>
+<body>
+    <div id="pop-up">
+        <span class="fechar">X</span>
+        <img src="img/popup.jpg" alt="">
+    </div>
+
+    <div id="opacidade"></div>
+
+    <header id="topo">
+       <div class="container">
+            <div id="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+
+            <nav id="menu">
+                <a href="index.html">Home</a>
+                <a href="#" id="quem-somos">Quem Somos</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="quem-somos-popup">
+        <span class="fechar">X</span>
+        <h2>Quem Somos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo asperiores ab nam. Odio, ducimus fuga! Obcaecati eos atque a laboriosam. Provident cum neque repudiandae in? Velit dolorum perferendis quae dolor minima rem cumque similique aut maxime laborum unde inventore eius maiores, praesentium aliquam, eum perspiciatis atque recusandae ex quisquam nostrum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo asperiores ab nam. Odio, ducimus fuga! Obcaecati eos atque a laboriosam. Provident cum neque repudiandae in? Velit dolorum perferendis quae dolor minima rem cumque similique aut maxime laborum unde inventore eius maiores, praesentium aliquam, eum perspiciatis atque recusandae ex quisquam nostrum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo asperiores ab nam. Odio, ducimus fuga! Obcaecati eos atque a laboriosam. Provident cum neque repudiandae in? Velit dolorum perferendis quae dolor minima rem cumque similique aut maxime laborum unde inventore eius maiores, praesentium aliquam, eum perspiciatis atque recusandae ex quisquam nostrum.</p>
+    </div>
+
+    <div class="theme-default">
+        <div id="banner">
+            <img src="img/banner-1.jpg" alt="" data-thumb="img/banner-1.jpg">
+            <img src="img/banner-2.jpg" alt="" data-thumb="img/banner-2.jpg">
+            <img src="img/banner-3.jpg" alt="" data-thumb="img/banner-3.jpg">
+        </div>
+    </div>
+
+    <div class="container">
+        <article id="destaque">
+            <h1>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum ante eu lectus gravida commodo.”</h1>
+            <p>Ana Santos</p>
+        </article>
+
+        <section class="coluna">
+            <h2>Nossos Serviços</h2>
+            <img src="img/imagem-servicos.jpg" alt="">
+            <a href="#" class="btn">Saiba Mais</a>
+        </section>
+
+        <section class="coluna">
+            <h2>Especial Dia da Noiva</h2>
+            <img src="img/imagem-dia-da-noiva.jpg" alt="">
+            <a href="#" class="btn">Saiba Mais</a>
+        </section>
+
+        <section class="coluna">
+            <h2>Ambiente Bella Estética</h2>
+            <img src="img/imagem-ambiente.jpg" alt="">
+            <a href="#" class="btn">Saiba Mais</a>
+        </section>
+    </div>
+
+    <footer id="rodape">
+        Tel: (21) 3322-4455 / 98788-5544 <br>
+        Avenida Rio Branco, 185 - Sala 324 - Centro - Rio de Janeiro
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 1</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+
+	<script>
+		$(function(){
+			//onload --- ao carregar a pagina
+            $("#ativ-1").hide();
+            $("#ativ-2").hide();
+
+            document.getElementById("vid_3")
+                .addEventListener("loadedmetadata", function() {
+                                this.currentTime = 1620;
+                                },
+                                false);
+
+            $("#infOne").on("click", function(){
+                $("#infOne h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            $("#infTwo").on("click", function(){
+                $("#infTwo h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            $("#infThree").on("click", function(){
+                $("#infThree h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            //quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+
+                //Intro
+                if(valor == "intro"){
+					$("#ativ-1, #ativ-2").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //Ativ-1
+                if(valor == "ativ-1"){
+					$("#intro, #ativ-2").hide();
+					$("#ativ-1").fadeIn(500);
+				}
+
+                //Ativ-2
+                if(valor == "ativ-2"){
+					$("#intro, #ativ-1").hide();
+					$("#ativ-2").fadeIn(500);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-2">
+			<!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+				<li><a href="#" data-value="ativ-1"><span><i class="fas fa-pencil-alt"></i></span> Activity 1</a></li>
+				<li><a href="#" data-value="ativ-2"><span><i class="fas fa-pencil-alt"></i></span> Activity 2</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-10 well">
+
+			<h1 class="page-header img-header">1. Lorem ipsum</h1>
+
+			<div id="intro">
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Lorem:</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque perspiciatis quas inventore nostrum. Reprehenderit numquam hic veniam, atque molestias deleniti et praesentium rerum. Ipsa et voluptatem similique, eveniet laboriosam unde.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, doloremque.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi!</p>
+                </section>
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Ipsum:</h2>
+                    <h3>Lorem ipsum 1: Amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, illo!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </section>
+			</div>
+
+			<div id="ativ-1">
+				<section class="col-xs-12">
+				<h3>Lorem ipsum dolor sit amet, consectetur</h3>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nostrum dignissimos est ipsum fugiat cumque.</p>
+				</section>
+
+				<section class="grupo-vt">
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> AIDS e os profissionais de saúde [Universidade]</h4>
+                        </div>
+
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+
+                        <div id="infOne" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseOne">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco de Objetos Educacionais do Ministério da Educação (BIOE/MEC).</p>
+                            <p class="text-muted no-decor"><strong>Duração:</strong> 26 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Canal Saúde da Fundação Oswaldo Cruz (Fiocruz).</p>
+                        </div>
+                    </div>
+
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4>
+                            <i class="fas fa-video fa-sm"></i> AIDS - Prevenção [Ligado em saúde]
+                        </h4>
+                        </div>
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+
+                        <div id="infTwo" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseTwo">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco de Objetos Educacionais do Ministério da Educação (BIOE/MEC).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 11 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Canal Saúde da Fundação Oswaldo Cruz (Fiocruz).</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 1: fill the blanks</h5>
+                    <p>Word bank: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                    <div class="banco-palavras">
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> Adquirida</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> coquetel</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> HIV</li>
+                        <li><input id="checkBox" type="checkbox"> sexuais</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> AZT</li>
+                        <li><input id="checkBox" type="checkbox"> correta</li>
+                        <li><input id="checkBox" type="checkbox"> preservativo</li>
+                        <li><input id="checkBox" type="checkbox"> tumores</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> cedo</li>
+                        <li><input id="checkBox" type="checkbox"> diagnóstico</li>
+                        <li><input id="checkBox" type="checkbox"> prevenção</li>
+                        <li><input id="checkBox" type="checkbox"> vertical</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> contaminação</li>
+                        <li><input id="checkBox" type="checkbox"> gravidez</li>
+                        <li><input id="checkBox" type="checkbox"> pública</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> vírus</li>
+                    </ul>
+                    </div>
+                </section>
+
+                <div class="col-xs-12">
+                    <p>Lorem ipsum dolor sit amet, <input type="text" id="blank_a1">. Consectetur adipisicing elit. Error neque qui fuga placeat voluptatum repudiandae, <input type="text" id="blank_b1"> commodi recusandae <input type="text" id="blank_c1">. Mollitia animi eaque enim, nam dolorem vitae beatae fuga <input type="text" id="blank_d1"> quidem laboriosam, <input type="text" id="blank_e1"> consequatur natus, incidunt odio sequi magni ullam numquam officiis quaerat nobis <input type="text" id="blank_f1">, excepturi.</p>
+
+                    <p>Lorem ipsum dolor sit amet, <input type="text" id="blank_g1"> consectetur adipisicing elit. Aliquid a nisi dicta vel? Vel aliquid nisi ab tenetur, dicta facere impedit natus deserunt dolore <input type="text" id="blank_h1"> perspiciatis itaque eos quia expedita, dolores!</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fugiat <input type="text" id="blank_i1">, molestias distinctio explicabo. Incidunt, explicabo, eos. Doloribus incidunt repellat recusandae, <input type="text" id="blank_j1"> tempore minus eos, <input type="text" id="blank_k1"> reprehenderit voluptatum ratione commodi, laboriosam velit <input type="text" id="blank_l1"> perferendis <input type="text" id="blank_m1"> perspiciatis repellendus quia nulla explicabo.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis itaque saepe ab quae reiciendis, id quam! Qui, modi <input type="text" id="blank_n1"> laborum obcaecati perspiciatis quis <input type="text" id="blank_o1"> eius odio ratione, blanditiis quae repellat numquam vel eveniet amet eaque. Aspernatur <input type="text" id="blank_p1"> sunt quidem repudiandae delectus magni nulla animi, sequi <input type="text" id="blank_q1"> ipsam labore nam facere ipsa quaerat! Pariatur, itaque.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo quas accusamus, aliquid, commodi inventore sit maxime, possimus nostrum sint dolor. Expedita debitis culpa error magni veritatis nulla, est id cumque delectus repellendus facilis, illum, nesciunt illo explicabo fugit <input type="text" id="blank_r1"> odio!</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, vitae <input type="text" id="blank_s1">!</p>
+
+                    <p><input type="button" class="btn btn-default" value="Corrigir" onclick="t1_a1()"></p>
+                </div>
+                <div class="floatFix"></div>
+                </div>
+
+            </div>
+
+            <div id="ativ-2">
+                <section class="col-xs-12">
+                    <h3>Lorem ipsum dolor</h3>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum modi quia, architecto voluptates blanditiis, repellendus maiores voluptatibus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam ex accusamus similique iusto molestias praesentium perspiciatis perferendis excepturi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem.</p>
+                </section>
+                <div class="floatFix"></div>
+                <section class="grupo-vt">
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> Biossegurança [Sala de Convidados]</h4>
+                        </div>
+                        <video id="vid_3" class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+                        <div id="infThree" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseThree">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco de Objetos Educacionais do Ministério da Educação (BIOE/MEC).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 28 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Canal Saúde da Fundação Oswaldo Cruz (Fiocruz).</p>
+                        </div>
+                    </div>
+
+                    <div class="artigo">
+                        <div class="artigo-text">
+                            <a href="pdf/Artigo_1.pdf" target="_blank"><i class="fas fa-file-pdf fa-2x fa-fw"></i></a>
+                        </div>
+                        <div class="artigo-text">
+                        <a href="pdf/Artigo_1.pdf" target="_blank">Article 1: Norma Técnica de Biossegurança para Laboratórios de Saúde Pública</a>
+                        <a href="http://bvsms.saude.gov.br/bvs/saudelegis/gm/2010/prt3204_20_10_2010.html" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Fonte: Ministério da Saúde</h6></a>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="floatFix"></div>
+
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 2: fill the blanks</h5>
+                    <p>Word bank: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                    <div class="banco-palavras">
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> biológicos</li>
+                        <li><input id="checkBox" type="checkbox"> individual</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> qualidade</li>
+                        <li><input id="checkBox" type="checkbox"> segurança</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> eliminar</li>
+                        <li><input id="checkBox" type="checkbox"> prevenir</li>
+                        <li><input id="checkBox" type="checkbox"> quatro</li>
+                        <li><input id="checkBox" type="checkbox"> técnicos</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> EPI</li>
+                        <li><input id="checkBox" type="checkbox"> proteger</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> risco</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> gerenciais</li>
+                        <li><input id="checkBox" type="checkbox"> Qualidade</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> riscos</li>
+                    </ul>
+                    </div>
+                    </section>
+
+                    <div class="col-xs-12">
+                    <p>Lorem ipsum dolor sit:</p>
+                    <p>Lorem ipsum dolor sit amet, <input type="text" id="blank_a2"> consectetur adipisicing elit. Recusandae mollitia itaque sint modi <input type="text" id="blank_b2"> laborum eos aut officiis asperiores expedita quis earum <input type="text" id="blank_c2"> nostrum labore, quae <input type="text" id="blank_d2"> dolorem ipsam quos, tempora molestiae dignissimos.</p>
+
+                    <p>Lorem <input type="text" id="blank_e2">:</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio aliquam, molestias ipsa at!</p>
+                    <p>Lorem <input type="text" id="blank_f2"> ipsum dolor sit amet, consectetur adipisicing elit <input type="text" id="blank_g2">. Rerum aliquam <input type="text" id="blank_h2"> dolor aperiam maiores dignissimos in nulla, modi praesentium <input type="text" id="blank_i2"> magni quis!</p>
+
+                    <p>Lorem ipsum dolor <input type="text" id="blank_j2"> vsit amet, consectetur <input type="text" id="blank_k2"> adipisicing elit. Veritatis dolorem blanditiis quibusdam est. Cupiditate <input type="text" id="blank_l2"> temporibus placeat ipsam eum vero, non distinctio saepe suscipit rem tenetur aperiam <input type="text" id="blank_m2"> iure, rerum maxime necessitatibus.</p>
+
+                    <p>Lorem ipsum dolor sit <input type="text" id="blank_n2">:</p>
+                    <p>Lorem ipsum <input type="text" id="blank_o2"> dolor sit amet, consectetur adipisicing elit. Dolorem necessitatibus voluptatem veritatis, eligendi beatae? Cum at perspiciatis esse nemo doloribus molestiae!</p>
+
+                    <p>Lorem ipsum dolor <input type="text" id="blank_p2"> sit amet, consectetur adipisicing elit. Laudantium officia officiis ut eos, <input type="text" id="blank_q2"> assumenda aut repellendus explicabo maxime repellat qui harum hic excepturi placeat cupiditate distinctio, <input type="text" id="blank_r2"> sint inventore nesciunt atque. Delectus repudiandae rem officiis.</p>
+
+                    <p><input type="button" class="btn btn-default" value="Corrigir" onclick="t1_a2()"></p>
+                </div>
+                    <div class="floatFix"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<script src="js/t1_a1.js"></script>
+<script src="js/t1_a2.js"></script>
+</body>
+</html>

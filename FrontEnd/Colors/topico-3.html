@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 3</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jdropwords.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+    <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<script>
+		$(function(){
+            $('#dropwords_ex3').jDropWords({
+                answers : {
+                    "P1" : "R1",
+                    "P2" : "R2",
+                    "P3" : "R3",
+                    "P4" : "R4",
+                    "P5" : "R5",
+                    "P6" : "R6",
+                    "P7" : "R7",
+                    "P8" : "R8",
+                    "P9" : "R9"
+                }
+            });
+		});
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-2">
+            <!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="ativ-3"><span><i class="fas fa-star"></i></span> Activity 3</a></li>
+			</ul>
+        </div>
+        <div class="well col-xs-10">
+            <h1 class="page-header img-header">3. Ex nam eum maiores</h1>
+            <div id="ativ-3">
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 id="ancora" class="page-header">Exercise 3: arrange the sentence</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit <a href="pdf/as_cores_do_ceu.pdf#page=7" target="_blank">página 7</a> necessitatibus culpa.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, obcaecati.</p>
+                    </section>
+
+                    <div id="dropwords_ex3" class="jdropwords col-xs-12">
+                        <ul class="words grupo-vt">
+                            <li class="word" id="R8">incidunt, temporibus</li>
+                            <li class="word" id="R9">aliquid excepturi optio?</li>
+                            <li class="word" id="R7">quaerat dolor animi,</li>
+                            <li class="word" id="R4">laborum possimus</li>
+                            <li class="word" id="R1">Lorem ipsum dolor sit amet,</li>
+                            <li class="word" id="R3">Quia distinctio</li>
+                            <li class="word" id="R6">neque,</li>
+                            <li class="word" id="R5">aspernatur tempora,</li> <li class="word" id="R2">consectetur adipisicing elit.</li>
+                        </ul>
+
+                        <div class="blanks">
+                            <p><span class="blank" id="P1"></span>
+                            <span class="blank" id="P2"></span>
+                            <span class="blank" id="P3"></span>
+                            <span class="blank" id="P4"></span>
+                            <span class="blank" id="P5"></span>
+                            <span class="blank" id="P6"></span>
+                            <span class="blank" id="P7"></span>
+                            <span class="blank" id="P8"></span>
+                            <span class="blank" id="P9"></span></p>
+                        </div>
+
+                        <div class="actions">
+                            <a class="btn btn-default reset">Restart</a>
+                            <a class="btn btn-default submit">Submit</a>
+                        </div>
+                    </div>
+                    <div class="floatFix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/jdropwords.js"></script>
+</body>
+</html>

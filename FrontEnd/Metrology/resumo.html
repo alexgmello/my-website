@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Abstract</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <script>
+		$(function(){
+            //onload --- ao carregar a pagina
+            $("#resumo").hide();
+
+			//quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+
+                //Intro
+                if(valor == "intro"){
+					$("#resumo").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //Resumo
+                if(valor == "resumo"){
+					$("#intro").hide();
+					$("#resumo").fadeIn(500);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-2">
+            <!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+			</ul>
+        </div>
+        <div class="well col-xs-10">
+            <h1 class="page-header img-header">Nihil nesciunt et, non</h1>
+            <div id="intro">
+                <section class="col-xs-12 resumo">
+
+                <div id="home" class="col-xs-12">
+				<section class="intro">
+				<div class="intro-text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam voluptas, ducimus facere dolorem? Fuga doloremque beatae molestiae distinctio velit hic numquam nulla! Veritatis earum velit iusto corrupti minus ratione esse.</p>
+				<div class="artigo">
+                    <div class="artigo-text">
+                        <a href="pdf/resumo_grafico.pdf" target="_blank"><i class="fas fa-file-pdf fa-2x fa-fw"></i></a>
+                    </div>
+                    <div class="artigo-text">
+                        <a href="pdf/resumo_grafico.pdf" target="_blank">Veritatis earum velit iusto corrupti</a>
+                    </div>
+                </div>
+				</div>
+				</section>
+			    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

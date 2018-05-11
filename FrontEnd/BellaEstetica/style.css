@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    background-image: url(img/background.jpg);
+    font-family: Calibri;
+}
+
+#opacidade {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 10000;
+    display: none;
+}
+
+.fechar {
+    position: absolute; /*posição em relação ao elemento pai (pop-up, nesse caso), desde que o pai tenha 'position'*/
+    color: #fff;
+    font-size: 30px;
+    top: -45px;
+    right: -30px;
+    cursor: pointer;
+}
+
+#pop-up {
+    width: 517px;
+    height: 300px;
+    position: fixed; /*posição em relação a tela*/
+    top: 50%;
+    left: 50%;
+    margin-left: -258px;
+    margin-top: -150px;
+    z-index: 10001;
+
+    border: solid 10px #fcfcfc;
+    box-shadow: 3px 3px 10px #000; /*Hor Ver suavidade cor*/
+
+    display: none;
+}
+
+#topo {
+    width: 100%;
+    height: 35px;
+    /*
+    border-bottom-style: solid;
+    border-bottom: 3px;
+    border-bottom-color: #bba6e7;
+    */
+    border-bottom: 3px solid #bba6e7;
+    background-color: rgba(65, 43, 112, 0.6);
+    /*Trazer o topo para frente*/
+    position: absolute;
+    z-index: 10;
+}
+
+#quem-somos-popup {
+    width: 600px;
+    height: 400px;
+    position: fixed; /*posição em relação a tela*/
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -200px;
+    z-index: 10001;
+    background-color: #bba6e7;
+    border: solid 10px #bba6e7;
+    box-shadow: 3px 3px 10px #000;
+    display: none;
+}
+
+#quem-somos-popup h2,p {
+    color: #3d2868;
+}
+
+#quem-somos-popup h2 {
+    font-family: 'ExpletusSansRegular';
+}
+
+#quem-somos-popup p {
+    padding: 0 30px;
+    text-align: justify;
+}
+
+.container {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+#logo {
+    float: left;
+}
+
+#menu {
+    float: right;
+}
+
+#menu a {
+    font-family: 'ExpletusSansRegular';
+    display: inline-block;
+    height: 35px; /*dispensável*/
+    line-height: 35px;
+    padding: 0 25px;
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+
+#menu a:hover {
+    background-color: #bba6e7;
+    transform: rotate(-10deg);
+}
+
+#banner img {
+    width: 100%;
+}
+
+#destaque {
+    width: 1000px;
+    height: 150px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px 70px;
+    box-sizing: border-box;
+    background-image: url(img/fundo-destaque.jpg);
+}
+
+#destaque h1 {
+    font-family: 'ExpletusSansRegular';
+    font-size: 30px;
+    font-style: italic;
+    font-weight: normal;
+    color: #fff;
+    margin: 0;
+}
+
+#destaque p {
+    color: #fff;
+    margin: 0;
+}
+
+.coluna {
+    float: left;
+    width: 310px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.coluna:last-child {
+    margin-right: 0;
+}
+
+.coluna h2 {
+    font-family: 'ExpletusSansRegular';
+    font-size: 22px;
+    margin: 0;
+    color: #422e70;
+}
+
+.coluna img {
+    margin: 12px 0;
+}
+
+.btn {
+    display: inline-block;
+    /*margin-bottom: 40px; margem no rodape*/
+    width: 150px;
+    height: 30px;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: #422e70;
+}
+
+.coluna a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #bba6e7;
+    line-height: 30px;
+}
+
+#rodape {
+    /*clear: both;*/
+    background-color: #3d2868;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 2</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jdropwords.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="js/jdropwords.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+
+	<script>
+		$(function(){
+            $('#dropwords_ex3').jDropWords({
+                answers : {
+                    "P1" : "R1",
+                    "P2" : "R2",
+                    "P3" : "R3",
+                    "P4" : "R4",
+                    "P5" : "R5",
+                    "P6" : "R6",
+                    "P7" : "R7",
+                    "P8" : "R8",
+                    "P9" : "R9"
+                }
+            });
+
+            //onload --- ao carregar a pagina
+            $("#ativ-3").hide();
+            $("#ativ-4").hide();
+
+            $("#infTwo").on("click", function(){
+                $("#infTwo h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            $("#infThree").on("click", function(){
+                $("#infThree h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            //quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+
+                //Intro
+                if(valor == "intro"){
+					$("#ativ-3, #ativ-4").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //Ativ-3
+                if(valor == "ativ-3"){
+					$("#intro, #ativ-4").hide();
+					$("#ativ-3").fadeIn(500);
+				}
+
+                //Ativ-4
+                if(valor == "ativ-4"){
+					$("#intro, #ativ-3").hide();
+					$("#ativ-4").fadeIn(500);
+				}
+			});
+        });
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-2">
+			<!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+				<li><a href="#" data-value="ativ-3"><span><i class="fas fa-pencil-alt"></i></span> Activity 3</a></li>
+				<li><a href="#" data-value="ativ-4"><span><i class="fas fa-pencil-alt"></i></span> Activity 4</a></li>
+			</ul>
+		</div>
+
+        <div class="well col-xs-10">
+            <h1 class="page-header img-header">2. Cumque rerum</h1>
+
+            <div id="intro">
+                <section class="col-xs-12">
+                    <h2>Deleniti at fuga officia eveniet laudantium.</h2>
+                    <ul>
+                        <li><span><i class="fas fa-thumbtack fa-sm fa-fw"></i></span> Autem vero aut: <i>facere molestias</i> e <i>eos earum</i>.</li>
+                        <li><span><i class="fas fa-thumbtack fa-sm fa-fw"></i></span> Iure quam dicta vero: <a href="pdf/Artigo_1.pdf#page=30" target="_blank"><strong>2.1</strong></a> e <a href="pdf/Artigo_1.pdf#page=48" target="_blank"><strong>3.1</strong></a>.</li>
+                        <li><span><i class="fas fa-thumbtack fa-sm fa-fw"></i></span> Culpa aspernatur.</li>
+                    </ul>
+                </section>
+
+                <section class="col-xs-12">
+                    <section class="grupo-vt">
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> Padrões de Medidas</h4>
+                        </div>
+
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+
+                        <div id="infTwo" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseOne">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco Internacional de Objetos Educacionais (BIOE).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 2 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Anderson Coser Gaudio.</p>
+                        </div>
+                    </div>
+
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4>
+                            <i class="fas fa-video fa-sm"></i> Análise do exemplo de medição
+                        </h4>
+                        </div>
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+
+                        <div id="infThree" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseTwo">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco Internacional de Objetos Educacionais (BIOE).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 3 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Anderson Coser Gaudio.</p>
+                        </div>
+                    </div>
+
+                    <div class="floatFix"></div>
+
+                    <div class="artigo float-left">
+                    <div class="artigo-text">
+                        <a href="pdf/Artigo_1.pdf#page=30" target="_blank"><i class="fas fa-file-pdf fa-2x fa-fw"></i></a>
+                    </div>
+                    <div class="artigo-text">
+                        <a href="pdf/Artigo_1.pdf#page=30" target="_blank">Vocabulário Internacional de Metrologia (VIM)</a>
+                        <a href="http://www.inmetro.gov.br/inovacao/publicacoes/vim_2012.pdf" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: INMETRO</h6></a>
+                    </div>
+                </div>
+                </section>
+                <div class="floatFix"></div>
+                </section>
+			</div>
+
+            <div id="ativ-3">
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 3: arrange the sentence</h5>
+                    <p> Veniam voluptatum voluptatibus dolores <a href="pdf/Artigo_1.pdf#page=62" target="_blank"><strong>(item 5.6)</strong></a> voluptatibus illum odio.</p>
+                </section>
+
+                <div id="dropwords_ex3" class="jdropwords col-xs-12">
+                    <ul class="words grupo-vt">
+                        <li class="word" id="R6">eius quod,</li>
+                        <li class="word" id="R9">dolores velit perspiciatis.</li>
+                        <li class="word" id="R2">eius repudiandae aliquam</li>
+                        <li class="word" id="R4">Natus accusantium quaerat</li>
+                        <li class="word" id="R1">Provident vitae,</li>
+                        <li class="word" id="R8">Veniam voluptatum voluptatibus</li>
+                        <li class="word" id="R3">amet cumque? </li>
+                        <li class="word" id="R7">quidem cumque distinctio in.</li>
+                        <li class="word" id="R5">atque eos sunt,</li>
+                    </ul>
+
+                    <div class="blanks">
+                        <p><span class="blank" id="P1"></span>
+                        <span class="blank" id="P2"></span>
+                        <span class="blank" id="P3"></span>
+                        <span class="blank" id="P4"></span>
+                        <span class="blank" id="P5"></span>
+                        <span class="blank" id="P6"></span>
+                        <span class="blank" id="P7"></span>
+                        <span class="blank" id="P8"></span>
+                        <span class="blank" id="P9"></span></p>
+                    </div>
+
+                    <div class="actions">
+                        <a class="btn btn-default reset">Restart</a>
+                        <a class="btn btn-default submit">Submit</a>
+                    </div>
+                </div>
+                    <div class="floatFix"></div>
+                </div>
+            </div>
+
+            <div id="ativ-4">
+                <div class="exercicio">
+                <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 4: fill the blanks</h5>
+                    <p>Possimus dicta cumque ex <a href="pdf/Artigo_1.pdf#page=48" target="_blank"><strong>(item 3.1)</strong></a> eum iste tenetur.</p>
+                    <p>Word bank: necessitatibus voluptatibus illum odio officiis nihil repudiandae labore repellat nobis.</p>
+                    <div class="banco-palavras">
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> balança</li>
+                        <li><input id="checkBox" type="checkbox"> quilograma</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> materializada</li>
+                        <li><input id="checkBox" type="checkbox"> régua</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> medida</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> medições</li>
+                    </ul>
+                    </div>
+                </section>
+
+                <div class="col-xs-12">
+                    <p>Lorem ipsum dolor sit amet <input type="text" id="blank_a4">, consectetur adipisicing elit. Rerum reiciendis, a commodi <input type="text" id="blank_b4"> dolorem, nobis eius sequi, quasi et perferendis sint veniam <input type="text" id="blank_c4">.</p>
+                    <p>Consequatur recusandae delectus, eum officia? Totam dolorum itaque, <input type="text" id="blank_d4"> possimus dolor corrupti, <input type="text" id="blank_e4"> tempora enim. Quo accusamus suscipit ducimus, optio voluptates <input type="text" id="blank_f4"> nobis excepturi!</p>
+
+                    <p><input type="button" class="btn btn-default" value="Corrigir" onclick="exercicio_4()"></p>
+                </div>
+                <div class="floatFix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/exercicio_4.js"></script>
+</body>
+</html>

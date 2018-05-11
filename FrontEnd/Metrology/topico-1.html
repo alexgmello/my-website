@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 1</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+
+	<script>
+		$(function(){
+			//onload --- ao carregar a pagina
+            $("#ativ-1").hide();
+            $("#ativ-2").hide();
+
+            $("#infOne").on("click", function(){
+                $("#infOne h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            //quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+
+                //Intro
+                if(valor == "intro"){
+					$("#ativ-1, #ativ-2").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //Ativ-1
+                if(valor == "ativ-1"){
+					$("#intro, #ativ-2").hide();
+					$("#ativ-1").fadeIn(500);
+				}
+
+                //Ativ-2
+                if(valor == "ativ-2"){
+					$("#intro, #ativ-1").hide();
+					$("#ativ-2").fadeIn(500);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-2">
+			<!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+				<li><a href="#" data-value="ativ-1"><span><i class="fas fa-pencil-alt"></i></span> Activity 1</a></li>
+				<li><a href="#" data-value="ativ-2"><span><i class="fas fa-pencil-alt"></i></span> Activity 2</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-10 well">
+
+			<h1 class="page-header img-header">1. Perspiciatis</h1>
+
+			<div id="intro">
+                <section class="col-xs-12">
+                    <h2>Os materiais relacionados a este tópico são:</h2>
+                    <ul>
+                        <li><span><i class="fas fa-thumbtack fa-sm fa-fw"></i></span> Lorem: <i>ipsum</i>.</li>
+                        <li><span><i class="fas fa-thumbtack fa-sm fa-fw"></i></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti suscipit animi maxime, assumenda odit: <a href="pdf/Artigo_1.pdf#page=16" target="_blank"><strong>1.1</strong></a>, <a href="pdf/Artigo_1.pdf#page=17" target="_blank"><strong>1.4</strong></a>, <a href="pdf/Artigo_1.pdf" target="_blank"><strong>1.6</strong></a>, <a href="pdf/Artigo_1.pdf#page=20" target="_blank"><strong>1.10</strong></a> and <a href="pdf/Artigo_1.pdf#page=22" target="_blank"><strong>1.16</strong></a>.</li>
+                        <li><span><i class="fas fa-thumbtack fa-sm fa-fw"></i></span> Ipsa fuga neque.</li>
+                    </ul>
+                </section>
+
+                <section class="col-xs-12">
+                    <section class="grupo-vt">
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> Introdução</h4>
+                        </div>
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+                        <div id="infOne" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseThree">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco Internacional de Objetos Educacionais (BIOE).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 4 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Anderson Coser Gaudio.</p>
+                        </div>
+                    </div>
+                    <div class="artigo">
+                        <div class="artigo-text">
+                            <a href="pdf/Artigo_1.pdf" target="_blank"><i class="fas fa-file-pdf fa-2x fa-fw"></i></a>
+                        </div>
+                        <div class="artigo-text">
+                        <a href="pdf/Artigo_1.pdf" target="_blank">Vocabulário Internacional de Metrologia (VIM)</a>
+                        <a href="http://www.inmetro.gov.br/inovacao/publicacoes/vim_2012.pdf" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: INMETRO</h6></a>
+                        </div>
+                    </div>
+                    <div class="floatFix"></div>
+                    </section>
+                </section>
+			</div>
+
+			<div id="ativ-1">
+				<div class="exercicio">
+                <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercício 1: fill the blanks</h5>
+                    <p>Lorem ipsum <a href="pdf/Artigo_1.pdf#page=16" target="_blank"><strong>1.1</strong></a>, <a href="pdf/Artigo_1.pdf#page=17" target="_blank"><strong>1.4</strong></a>, <a href="pdf/Artigo_1.pdf" target="_blank"><strong>1.6</strong></a>, <a href="pdf/Artigo_1.pdf#page=20" target="_blank"><strong>1.10</strong></a> and <a href="pdf/Artigo_1.pdf#page=22" target="_blank"><strong>1.16</strong></a> adipisicing elit..</p>
+                    <p>Word bank: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="banco-palavras">
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> base</li>
+                        <li><input id="checkBox" type="checkbox"> Grandeza</li>
+                        <li><input id="checkBox" type="checkbox"> outras</li>
+                        <li><input id="checkBox" type="checkbox"> nomes</li>
+                        <li><input id="checkBox" type="checkbox"> tempo</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> comprimento</li>
+                        <li><input id="checkBox" type="checkbox"> grandezas</li>
+                        <li><input id="checkBox" type="checkbox"> massa</li>
+                        <li><input id="checkBox" type="checkbox"> número</li>
+                        <li><input id="checkBox" type="checkbox"> Unidade</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> corpo</li>
+                        <li><input id="checkBox" type="checkbox"> Grandezas</li>
+                        <li><input id="checkBox" type="checkbox"> medida</li>
+                        <li><input id="checkBox" type="checkbox"> prefixos</li>
+                        <li><input id="checkBox" type="checkbox"> unidades</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> grandeza</li>
+                        <li><input id="checkBox" type="checkbox"> Internacional</li>
+                        <li><input id="checkBox" type="checkbox"> nenhuma</li>
+                        <li><input id="checkBox" type="checkbox"> temperatura</li>
+                        <li><input id="checkBox" type="checkbox"> Unidades</li>
+                    </ul>
+                    </div>
+                </section>
+
+                <div class="col-xs-12">
+                    <p><input type="text" id="blank_a1"> ipsum dolor sit amet, consectetur adipisicing elit <input type="text" id="blank_b1">. Unde, repudiandae, <input type="text" id="blank_c1"> nostrum. Quis laudantium odio ea obcaecati, <input type="text" id="blank_d1"> doloremque nesciunt totam non, <input type="text" id="blank_e1"> excepturi error, debitis pariatur quam delectus itaque voluptatibus reprehenderit rerum <input type="text" id="blank_f1">.</p>
+                    <p><input type="text" id="blank_g1"> ipsa sint vel reiciendis <input type="text" id="blank_h1"> voluptatem laboriosam facere vero quisquam adipisci, <input type="text" id="blank_i1"> nihil omnis, pariatur temporibus <input type="text" id="blank_j1">, <input type="text" id="blank_k1">, <input type="text" id="blank_l1"> ratione voluptate <input type="text" id="blank_m1"> quae! Placeat asperiores reiciendis, voluptas hic iste dicta. <input type="text" id="blank_n1"> consectetur atque molestiae eligendi iure officia <input type="text" id="blank_o1"?</p>
+                    <p>Esse, tempore? Quis <input type="text" id="blank_p1"> cum aliquam placeat ab culpa,  <input type="text" id="blank_q1"> modi eius error quia ipsam qui officia nobis expedita consequatur <input type="text" id="blank_r1"> voluptate temporibus blanditiis accusantium? Ipsum voluptates <input type="text" id="blank_s1"> quam vitae modi, tempora corporis! Enim.</p>
+                    <p>In commodi illum corporis, recusandae quibusdam et earum inventore <input type="text" id="blank_t1"> itaque unde consequuntur accusamus sit adipisci excepturi veniam perspiciatis officia, voluptates modi natus mollitia perferendis cumque <input type="text" id="blank_u1">.</p>
+
+                    <p><input type="button" class="btn btn-default" value="Corrigir" onclick="exercicio_1()"></p>
+                </div>
+                <div class="floatFix"></div>
+                </div>
+
+            </div>
+
+            <div id="ativ-2">
+                <div class="exercicio">
+                <section class="destaque">
+                <h5 class="page-header">Exercise 2: columns association</h5>
+                <p>Lorem ipsum dolor sit amet <a href="pdf/Artigo_1.pdf#page=22" target="_blank"><strong>1.16</strong></a>, consectetur adipisicing elit. Tempore porro excepturi ipsa optio harum quidem sint expedita sit aperiam rerum?</p>
+                </section>
+                <div class="row">
+                <div class="card col-xs-5">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Lorem ipsum dolor</strong></li>
+                    <li class="list-group-item"><input type="text" id="blank_b2" class="col-xs-1 blank_mr"> Sit pariatur eum asperiores</li>
+                    <li class="list-group-item"><input type="text" id="blank_g2" class="col-xs-1 blank_mr">Sit pariatur eum asperiores</li>
+                    <li class="list-group-item"><input type="text" id="blank_f2" class="col-xs-1 blank_mr"> Sit pariatur eum asperiores</li>
+                    <li class="list-group-item"><input type="text" id="blank_e2" class="col-xs-1 blank_mr"> Sit pariatur eum asperiores</li>
+                    <li class="list-group-item"><input type="text" id="blank_c2" class="col-xs-1 blank_mr"> Sit pariatur eum asperiores</li>
+                    <li class="list-group-item"><input type="text" id="blank_d2" class="col-xs-1 blank_mr"> Sit pariatur eum asperiores</li>
+                    <li class="list-group-item"><input type="text" id="blank_a2" class="col-xs-1 blank_mr"> Sit pariatur eum asperiores</li>
+
+                    <input type="button" class="btn btn-default" value="Corrigir" onclick="exercicio_2()">
+                </ul>
+                </div>
+
+                <div class="card col-xs-5 col-xs-offset-2 hidden-xs">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Excepturi (elit)</strong></li>
+                    <li class="list-group-item"><strong>(A)</strong> Consectetur (adipisicing)</li>
+                    <li class="list-group-item"><strong>(B)</strong> Consectetur (adipisicing)</li>
+                    <li class="list-group-item"><strong>(C)</strong> Consectetur (adipisicing)</li>
+                    <li class="list-group-item"><strong>(D)</strong> Consectetur (adipisicing)</li>
+                    <li class="list-group-item"><strong>(E)</strong> Consectetur (adipisicing)</li>
+                    <li class="list-group-item"><strong>(F)</strong> Consectetur (adipisicing)</li>
+                    <li class="list-group-item"><strong>(G)</strong> Consectetur (adipisicing)</li>
+                </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/exercicio_1.js"></script>
+<script src="js/exercicio_2.js"></script>
+</body>
+</html>

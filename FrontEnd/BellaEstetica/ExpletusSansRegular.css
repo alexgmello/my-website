@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ExpletusSansRegular';
+    src: url('fonts/ExpletusSansRegular.eot');
+    src: url('fonts/ExpletusSansRegular.eot') format('embedded-opentype'),
+         url('fonts/ExpletusSansRegular.woff2') format('woff2'),
+         url('fonts/ExpletusSansRegular.woff') format('woff'),
+         url('fonts/ExpletusSansRegular.ttf') format('truetype'),
+         url('fonts/ExpletusSansRegular.svg#ExpletusSansRegular') format('svg');
+}

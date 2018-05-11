@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 2</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+
+	<script>
+		$(function(){
+			//onload --- ao carregar a pagina
+            $("#ativ-3").hide();
+            $("#ativ-4").hide();
+            $("#ativ-5").hide();
+
+
+			//quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+
+                //Intro
+                if(valor == "intro"){
+					$("#ativ-3, #ativ-4, #ativ-5").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //Ativ-3
+                if(valor == "ativ-3"){
+					$("#intro, #ativ-4, #ativ-5").hide();
+					$("#ativ-3").fadeIn(500);
+				}
+
+                //Ativ-4
+                if(valor == "ativ-4"){
+					$("#intro, #ativ-3, #ativ-5").hide();
+					$("#ativ-4").fadeIn(500);
+				}
+
+                //Ativ-5
+                if(valor == "ativ-5"){
+					$("#intro, #ativ-3, #ativ-4").hide();
+					$("#ativ-5").fadeIn(500);
+				}
+			});
+        });
+	</script>
+	<script>
+        $(window).load(function(){
+            $("#cientista-1").on("click", function(){
+                var y = document.getElementById("curriculo-1")
+                if(y.style.display == "none") {
+                    $("#curriculos").children().fadeOut(5);
+                    $("#cientistas").children().children().removeClass("opacidade");
+                    y.style.display = "inline-block";
+                    $(this).children().addClass("opacidade");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $("#cientistas").children().children().removeClass("opacidade");
+                }
+            });
+
+            $("#cientista-2").on("click", function(){
+                var y = document.getElementById("curriculo-2")
+                if(y.style.display == "none") {
+                    $("#curriculos").children().fadeOut(5);
+                    $("#cientistas").children().children().removeClass("opacidade");
+                    y.style.display = "inline-block";
+                    $(this).children().addClass("opacidade");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $("#cientistas").children().children().removeClass("opacidade");
+                }
+            });
+
+            $("#cientista-3").on("click", function(){
+                var y = document.getElementById("curriculo-3")
+                if(y.style.display == "none") {
+                    $("#curriculos").children().fadeOut(5);
+                    $("#cientistas").children().children().removeClass("opacidade");
+                    y.style.display = "inline-block";
+                    $(this).children().addClass("opacidade");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $("#cientistas").children().children().removeClass("opacidade");
+                }
+            });
+
+            $("#cientista-4").on("click", function(){
+                var y = document.getElementById("curriculo-4")
+                if(y.style.display == "none") {
+                    $("#curriculos").children().fadeOut(5);
+                    $("#cientistas").children().children().removeClass("opacidade");
+                    y.style.display = "inline-block";
+                    $(this).children().addClass("opacidade");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $("#cientistas").children().children().removeClass("opacidade");
+                }
+            });
+
+            $("#cientista-5").on("click", function(){
+                var y = document.getElementById("curriculo-5")
+                if(y.style.display == "none") {
+                    $("#curriculos").children().fadeOut(5);
+                    $("#cientistas").children().children().removeClass("opacidade");
+                    y.style.display = "inline-block";
+                    $(this).children().addClass("opacidade");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $("#cientistas").children().children().removeClass("opacidade");
+                }
+            });
+
+            $("#cientista-6").on("click", function(){
+                var y = document.getElementById("curriculo-6")
+                if(y.style.display == "none") {
+                    $("#curriculos").children().fadeOut(5);
+                    $("#cientistas").children().children().removeClass("opacidade");
+                    y.style.display = "inline-block";
+                    $(this).children().addClass("opacidade");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $("#cientistas").children().children().removeClass("opacidade");
+                }
+            });
+
+            $("#cientista-7").on("click", function(){
+                var y = document.getElementById("curriculo-7")
+                if(y.style.display == "none") {
+                    $("#curriculos").children().fadeOut(5);
+                    $("#cientistas").children().children().removeClass("opacidade");
+                    y.style.display = "inline-block";
+                    $(this).children().addClass("opacidade");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $("#cientistas").children().children().removeClass("opacidade");
+                }
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-2">
+			<!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+				<li><a href="#" data-value="ativ-3"><span><i class="fas fa-pencil-alt"></i></span> Activity 3</a></li>
+				<li><a href="#" data-value="ativ-4"><span><i class="fas fa-pencil-alt"></i></span> Activity 4</a></li>
+				<li><a href="#" data-value="ativ-5"><span><i class="fas fa-pencil-alt"></i></span> Activity 5</a></li>
+			</ul>
+		</div>
+
+        <div class="well col-xs-10">
+            <h1 class="page-header img-header">2. Lorem ipsum dolor</h1>
+
+            <div id="intro">
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Lorem:</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum eos, ex dolorum officia. Dolor facilis quod at eius ducimus rerum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dolores provident natus, nisi facilis fugiat accusantium hic aliquid porro. In facilis totam ex itaque, minus.</p>
+                </section>
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Ipsum:</h2>
+                    <h3>qLorem ipsum dolor: sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi.</p>
+                    <h3>Lorem ipsum dolor: consectetur.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, magni.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </section>
+			</div>
+
+            <div id="ativ-3">
+
+                <section class="col-xs-12">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quibusdam veritatis voluptates sed, beatae illo placeat maxime ipsam ab, expedita laudantium! Rerum aliquid consequatur perferendis eaque delectus sunt, consectetur, sed a culpa est reprehenderit. Id aspernatur atque ipsam consequatur nesciunt, error officia mollitia, ut quisquam adipisci facere sit laboriosam natus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eligendi earum repellendus blanditiis omnis, fuga rerum ad reiciendis voluptatum quia illum molestiae veritatis perspiciatis optio quam, culpa quis velit voluptas nulla sint ea totam consequuntur. Voluptas adipisci placeat neque expedita architecto, inventore enim cum quisquam, <strong>impedit laborum</strong> accusantium asperiores totam et incidunt, in repudiandae, quas.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur <a href="http://lattes.cnpq.br/" target="_blank">Plataforma Lattes</a>.</p>
+                </section>
+                <div class="floatFix"></div>
+                <div id="ancora">
+                    <h4>Select the cientist to read his/her curriculum:</h4>
+                </div>
+
+                <section id="cientistas" onclick="window.location='#ancora'">
+                    <div class="curriculo-box" id="cientista-1">
+                        <img src="img/topico-2/bernardo-galvao.jpg" alt="http://www.pmvc.ba.gov.br/discussoes-sobre-acolhimento-htlv-e-assistencia-juridica-encerram-seminario-de-atencao-a-vida/">
+                        <div class="cientista">
+                            <p>Bernardo Galvão Castro Filho</p>
+                        </div>
+                    </div>
+
+                    <div class="curriculo-box" id="cientista-2">
+                        <img src="img/topico-2/castello-branco.jpg" alt="https://www.researchgate.net/profile/Luiz_Castello-Branco">
+                        <div class="cientista">
+                            <p>Luiz Roberto Castello Branco</p>
+                        </div>
+                    </div>
+
+                    <div class="curriculo-box" id="cientista-3">
+                        <img src="img/topico-2/jorge-eurico.jpg" alt="http://lattes.cnpq.br/9990869060911216">
+                        <div class="cientista">
+                            <p>Jorge Eurico Ribeiro</p>
+                        </div>
+                    </div>
+
+                    <div class="curriculo-box" id="cientista-4">
+                        <img src="img/topico-2/helio-gelli.jpg" alt="http://www.ioc.fiocruz.br/pages/informerede/corpo/informeemail/2007/1904/heliopereira.html">
+                        <div class="cientista">
+                            <p>Hélio Gelli Pereira</p>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="curriculo-box" id="cientista-5">
+                        <img src="img/topico-2/luc-montagnier.jpg" alt="https://en.wikipedia.org/wiki/File:Luc_Montagnier-press_conference_Dec_06th,_2008-6.jpg">
+                        <div class="cientista">
+                            <p>Luc Montagnier</p>
+                        </div>
+                    </div>
+
+                    <div class="curriculo-box" id="cientista-6">
+                        <img src="img/topico-2/robert-gallo.jpg" alt="https://pt.wikipedia.org/wiki/Robert_Gallo">
+                        <div class="cientista">
+                            <p>Robert Gallo</p>
+                        </div>
+                    </div>
+
+                    <div class="curriculo-box" id="cientista-7">
+                        <img src="img/topico-2/francoise-barre.jpg" alt="By Prolineserver (talk) - Own work, GFDL 1.2, https://commons.wikimedia.org/w/index.php?curid=5395403">
+                        <div class="cientista">
+                            <p>Françoise Barré-Sinoussi</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="floatFix"></div>
+                <section id="curriculos">
+                    <div id="curriculo-1" style="display: none;">
+                        <p>Médico (1969), mestre em Patologia Humana (1974) pela Universidade Federal da Bahia e doutor em Medicina - área de concentração Imunopatologia (1977) pela Universidade de Genebra, Suíça. Em 1979 Implantou o Centro de Imunologia Parasitária do Instituto Oswaldo Cruz, Fiocruz, Rio de Janeiro, que deu origem ao Departamento de Imunologia, congregando pesquisadores que se destacaram internacionalmente na área de doenças parasitárias (chagas, leishmanioses, malária e micoses).</p>
+                        <p>Em 1982, iniciou trabalhos pioneiros na área de AIDS, tendo isolado o HIV, pela primeira vez na América Latina, e contribuído para implantação da triagem deste vírus nos bancos de sangue do país. Em 1988, transferiu-se para Salvador/BA tendo implantando o Laboratório Avançado de Saúde Pública (Laboratório Nacional de Referência do Ministério da Saúde para o Diagnóstico HIV/HTLV) no Centro de Pesquisas Gonçalo Moniz da Fiocruz/BA.</p>
+                        <p>Em 2001, implantou o Centro Integrativo Multidisciplinar de HTLV-1 da EBMSP. Coordenou a Rede Nacional de Isolamento e Caracterização do HIV (1993-2001). Professor Titular da Escola Bahiana de Medicina e Saúde Pública (EBMSP) e Coordenador do Centro Integrativo Multidisciplinar de HTLV (EBMSP). Pesquisador Emérito da Fundação Oswaldo Cruz. Membro do Conselho Curador da Fundação José Silveira. Membro da Assembléia do Instituto Brasileiro de Oftalmologia e Prevenção da Cegueira. Membro da Academia de Ciências da Bahia. Membro do Conselho Diretor da Academia de Ciências da Bahia. Tem experiência na área de Retrovirologia Humana (HIV/AIDS e HTLV), principalmente em polimorfismo viral, patogêneses, diagnóstico laboratorial, origem e disseminação do HIV e HTLV.</p>
+                        <a href="http://lattes.cnpq.br/6926501999438658" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Fonte: Currículo Lattes</h6></a>
+                    </div>
+
+                    <div id="curriculo-2" style="display: none;">
+                        <p>Graduação em Medicina pela Faculdade Técnico Educacional Souza Marques (1979), Mestrado em Medicina (Cirurgia Geral) pela Universidade Federal do Rio de Janeiro (1987) e Doutorado em Imunologia Clínica pela Universidade de Londres (1992). Diretor Científico da Fundação Ataulpho de Paiva e Membro do Comitê da Vacina BCG da OMS - World Health Organization. Tem experiência na área de Imunologia, com ênfase em Imunologia de mucosas e prevenção, atuando principalmente nos seguintes temas: HIV, tuberculose, vacinas e microbicidas. Tem interesse em P&D, tendo sido responsável pela certificação internacional da estirpe e da vacina BCG Moreau Rio de Janeiro na OMS e desenvolvido pesquisas que geraram patentes com o BCG e testes diagnosticos.</p>
+                        <p>Foi chefe do Laboratório de Imunologia Clínica do Instituto Oswaldo Cruz/Fundação Oswaldo Cruz (1994 a 2013), Membro do MUVAPRED (Mucosal Vaccines For Poverty Related Diseases) da Comunidade Economica Europeia (2001 a 2004), Coordenador de área de Vacinas do INCT em Tuberculose e Membro da Câmara Técnica de Imunobiológicos do MInistério da Saúde.</p>
+                        <a href="http://lattes.cnpq.br/4838427854310674" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Fonte: Currículo Lattes</h6></a>
+                    </div>
+
+                    <div id="curriculo-3" style="display: none;">
+                        <p>Possui graduação em Medicina pela Universidade Federal do Estado do Rio de Janeiro (1992). Pós-graduado em Endocrinologia e Medicina de Família e Comunidade. Possui título de especialista em Doenças Infecciosas. Pós-graduando em Bioética e Ética aplicada pela Fiocruz. Atualmente é assessor técnico do Ministério da Saúde, Departamento de DST, Aids e Hepatites Virais. Tem experiência na área de Saúde Coletiva, com ênfase em Doenças Infecciosas e Parasitárias, atuando principalmente nos seguintes temas: DST, HIV/Aids, Hepatites Virais.</p>
+                        <a href="http://lattes.cnpq.br/9990869060911216" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Fonte: Currículo Lattes</h6></a>
+                    </div>
+
+                    <div id="curriculo-4" style="display: none;">
+                        <p>Contribuiu de forma decisiva para o desenvolvimento da Virologia. Fez descobertas que modificaram a ciência tanto no Brasil como no exterior. Tinha uma postura de humildade frente à ciência e sempre aconselhava a responder os desafios com trabalho. Naturalizado cidadão da Inglaterra em 1957, onde foi Chefe da Divisão de Virologia do Instituto Nacional de Pesquisas Médicas e chefe de Departamento de Virologia em universidade. Teve sua carreira no Instituto Oswaldo Cruz marcada por dois períodos: entre 1948 e 1951, quando iniciou sua carreira, e na sua volta após a sua aposentadoria na Inglaterra, onde aqui permaneceu de 1979 a 1994, quando faleceu.</p>
+                        <a href="http://www.ioc.fiocruz.br/pages/informerede/corpo/informeemail/2007/1904/heliopereira.html" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Fonte: Fiocruz</h6></a>
+                    </div>
+
+                    <div id="curriculo-5" style="display: none;">
+                        <p>Virologista francês, Luc Montagnier nasceu em 18 de Agosto de 1932, em Chabris. Iniciou a sua carreira de investigador trabalhando como assistente da Faculdade de Ciências de Paris. Trabalhou no Instituto Curie e em 1972 tornou-se diretor do Instituto Pasteur. É membro de várias academias francesas e internacionais e dedica os seus estudos à biologia celular, à virologia e ao cancro. É também presidente da <i>World Foundation for AIDS Research and Prevention</i>, que ajudou a fundar.</p>
+                        <p>Em 1982, Montagnier dirigia uma equipe de investigação à qual pertencia Françoise Barré-Sinoussi, quando Willy Rozenbaum, um médico do Bichat Hôpital de Paris, requisitou a ajuda dessa mesma equipe. Foi-lhes pedido que tentassem descobrir a causa viral de uma nova e misteriosa síndrome, a SIDA, que infectava alguns doentes seus. Rozenbaum (que foi também muito importante neste processo) sugeriu que a causa poderia ser um retrovírus e enviou a biópsia de um nódulo linfático de um dos seus pacientes para que a equipe de Montagnier a analisasse. Montagnier dissecou o nódulo e fez uma cultura a partir dele. Nas semanas seguintes, Barré-Sinoussi e os seus assistentes analisaram a cultura e determinaram que a atividade retroviral era a responsável pelo efeito patogênico do vírus nos linfócitos.</p>
+                        <p>O vírus recebeu o nome LAV (<i>Lymphadenopathy Associated Virus</i>) e em 1986 passou a designar-se HIV (<i>Human Immunodeficiency Virus</i>) ou VIH (Vírus da Imunodeficiência Humana), em português. As investigações de Luc Montagnier contribuíram muito para que se compreendesse de que forma os vírus alteram a informação genética dos organismos hospedeiros, o que permitiu alguns avanços significativos na área da pesquisa oncológica.</p>
+                        <a href="https://www.infopedia.pt/$luc-montagnier" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Fonte: Infopédia</h6></a>
+                    </div>
+
+                    <div id="curriculo-6" style="display: none;">
+                        <p>Robert Charles Gallo (Waterbury, 23 de março de 1937) é um médico pesquisador estadunidense. É conhecido como um dos descobridores do vírus do HIV. Os créditos por essa descoberta, ou isolamento, do vírus HIV foram divididos com dois outros médicos do Instituto Pasteur da França, Dr. Luc Montagnier e Dra. Françoise Barré-Sinoussi. Estes dois últimos, agraciados com o Prêmio Nobel de Fisiologia ou Medicina de 2008.</p>
+                        <p>Frase atribuída a ele: "Quem não sabe explicar o que faz em quinze minutos é porque não sabe o que está fazendo".</p>
+                        <p>No dia 4 de maio de 1984, Gallo e seus colaboradores publicaram uma série de quatro artigos científicos no periódico Science demonstrando que um retrovírus que eles isolaram chamado HTLV-III, na convicção de que o vírus estava relacionado aos vírus de leucemia de um trabalho anterior de Gallo, era a causa da AIDS. Um time francês no Instituto Pasteur em Paris, liderado por Luc Montaignier, publicou um artigo no Science em 1983, descrevendo um retrovírus que eles chamaram de LAV (lymphadenopathy associated virus ou vírus associado à linfadenopatia), isolado de um paciente com risco de AIDS. Gallo ganhou seu segundo Prêmio Lasker em 1986 por "determinar que o retrovírus agora conhecido por HIV-1 é a causa da Síndrome da Imunodeficiência Adquirida (AIDS)." Ele é o único que ganhou dois prêmios Lasker.</p>
+                        <a href="https://pt.wikipedia.org/wiki/Robert_Gallo" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Fonte: Wikipedia</h6></a>
+                    </div>
+
+                    <div id="curriculo-7" style="display: none;">
+                        <p>Virologista francesa, Françoise Barré-Sinoussi nasceu em 30 de Julho de 1947 em Paris, e é diretora da Unidade de Regulação das Infeções Retrovirais, no Departamento de Virologia do Instituto Pasteur, em Paris. O seu percurso acadêmico foi feito na Universidade das Ciências de Paris, em 1968 (Bioquímica), no Instituto Pasteur e na Universidade das Ciências de Paris, entre 1972 e 1975 (doutorado em Virologia) e na Fundação de Ciência Nacional, NIH-NCI, em Bethesda, nos Estados Unidos, entre 1975 e 1976 (pós-doutorado em Retrovirologia). Desde 1975 que Barré-Sinoussi trabalha no Instituto Pasteur, tendo começado como investigadora assistente, passando depois a professora assistente e, finalmente, a diretora de investigação. Em 1986 teve a seu cargo o Laboratório de Biologia Retroviral (que entretanto passou a designar-se por Unidade de Regulação das Infecções Retrovirais), uma vez que a sua área de investigação incidia sobre um grupo particular de vírus – os retrovírus.</p>
+                        <p>Em 1983, Barré-Sinoussi fez parte de um grupo de investigadores liderado por Luc Montagnier, grupo ao qual foi pedido que descobrisse a causa de uma nova síndrome denominada SIDA. Foi feita uma análise de um nódulo linfático de um dos pacientes infectados e o conhecimento de Barré-Sinoussi na área de investigação retroviral foi fundamental para a descoberta do retrovírus VIH (Vírus da Imunodeficiência Humana) e o seu reconhecimento como causador de SIDA, em 1983. Em 1988, a virologista iniciou uma série de programas de investigação relacionados com o vírus VIH e, até 1998, esteve também envolvida em programas de tentativa de desenvolvimento de vacinas, usando primatas. A sua equipe de investigação está focando o seu trabalho em aspetos específicos como a tentativa de regulação da infeção por VIH, mais propriamente no estudo da transmissão do vírus de mãe para filho e na importância das defesas inatas do indivíduo no controle do vírus.</p>
+                        <p>Barré-Sinoussi é autora e coautora de mais de 200 publicações científicas e recebeu diversos prêmios e condecorações pelo seu notável trabalho, como o <i>Award of the French Academy of Medicine</i>, o <i>King Faisal International Prize of Medicinel</i>, o <i>Prize Medicine and Research of the Institute of Sciences of the Health</i>, o <i>Emeritus Award of the International AIDS Society</i> ou o <i>ARRI Award in Biomedical Sciences</i>. A virologista tem colaborado imensamente com diversas sociedades científicas e com organizações ligadas à SIDA, como a <i>National Agency for AIDS Research</i>.</p>
+                        <p>Em 2008, Françoise Barré-Sinoussi foi distinguida com o Prêmio Nobel da Medicina (que dividiu com o compatriota Luc Montagnier e com o alemão Harald zur Hausen) pela contribuição para a descoberta do VIH, fundamental para compreender o desenvolvimento da SIDA e desenvolver tratamentos retrovirais.</p>
+                        <a href="https://www.infopedia.pt/$francoise-barre-sinoussi" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Fonte: Infopédia</h6></a>
+                    </div>
+                </section>
+
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque">
+                    <h5 class="page-header">Exercise 3: columns association</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ipsa.</p>
+                    </section>
+
+                    <div class=" col-xs-12">
+                        <div class="col-xs-3">
+                            <input type="text" id="blank_e3" class="col-xs-2"><p class="col-xs-10">Luc Montagnier</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <input type="text" id="blank_c3" class="col-xs-2"><p class="col-xs-10">Robert Gallo</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <input type="text" id="blank_g3" class="col-xs-2"><p class="col-xs-10">Hélio Gelli Pereira</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <input type="text" id="blank_b3" class="col-xs-2"><p class="col-xs-10">Bernardo Galvão Castro Filho</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <input type="text" id="blank_f3" class="col-xs-2"><p class="col-xs-10">Luiz Roberto Castello Branco</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <input type="text" id="blank_d3" class="col-xs-2"><p class="col-xs-10">Jorge Eurico Ribeiro</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <input type="text" id="blank_a3" class="col-xs-2"><p class="col-xs-10">Françoise Barré-Sinoussi</p>
+                        </div>
+                    </div>
+                    <div class="floatFix"></div>
+
+
+                    <p><input type="button" class="btn btn-default" value="Corrigir" onclick="t2_a3()"></p>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Currículo A</h5>
+                            <p class="card-text">Virologista francesa. Em 1983 fez parte de um grupo de investigadores descobrisse a causa de uma nova síndrome uma análise de um nódulo linfático de um dos pacientes infetados e o seu conhecimento na área de investigação retroviral foi fundamental para a descoberta do retrovírus HIV. Em 2008, recebeu Prémio Nobel da Medicina.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Currículo B</h5>
+                            <p class="card-text">Em 1982, iniciou trabalhos pioneiros na área de AIDS, tendo isolado o HIV, pela primeira vez na América Latina, e contribuído para implantação da triagem deste vírus nos bancos de sangue do país. Tem experiência na área de Retrovirologia Humana (HIV/AIDS e HTLV), principalmente em polimorfismo viral, patogêneses, diagnóstico laboratorial, origem e disseminação do HIV e HTLV.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Currículo C</h5>
+                            <p class="card-text">Médico e pesquisador estadunidense, publicou com sua equipe uma série de quatro artigos científicos no periódico Science demonstrando que um retrovírus que eles isolaram era a causa da AIDS. O vírus foi chamado HTLV-III porque a equipe de pesquisadores relacionou aos vírus de leucemia de um trabalho anterior.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Currículo D</h5>
+                            <p class="card-text">Médico e pós-graduado em Endocrinologia e Medicina de Família e Comunidade. Possui título de especialista em Doenças Infecciosas. Pós-graduando em Bioética e Ética aplicada pela Fiocruz. Atualmente é assessor técnico do Ministério da Saúde, Departamento de DST, Aids e Hepatites Virais. Tem experiência na área de Saúde Coletiva, com ênfase em Doenças Infecciosas e Parasitárias, atuando principalmente nos seguintes temas: DST, HIV/Aids, Hepatites Virais.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Currículo E</h5>
+                            <p class="card-text">Virologista francês, em 1982 dirigia uma equipe de investigação no Instituto Pasteur que recebeu a incumbência de descobrir a causa viral de uma nova e misteriosa síndrome. A partir do material de biópsia de um nódulo linfático, a equipe identificou um retrovírus reponsável pelo efeito patogênico. Por essa descoberta, o pesquisador dividiu o Prêmio Nobel de Medicina em 2008.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Currículo F</h5>
+                            <p class="card-text">Médico, mestre em Medicina (Cirurgia Geral) e doutor em Imunologia Clínica. Diretor Científico da Fundação Ataulpho de Paiva e Membro do Comitê da Vacina BCG da OMS - World Health Organization. Tem experiência na área de Imunologia, com ênfase em Imunologia de mucosas e prevenção, atuando principalmente nos seguintes temas: HIV, tuberculose, vacinas e microbicidas.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-xs-6">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Currículo G</h5>
+                            <p class="card-text">Contribuiu de forma decisiva para o desenvolvimento da Virologia. Fez descobertas que modificaram a ciência tanto no Brasil como no exterior. Tinha uma postura de humildade frente à ciência e sempre aconselhava a responder os desafios com trabalho. Naturalizado cidadão da Inglaterra em 1957, onde foi Chefe da Divisão de Virologia do Instituto Nacional de Pesquisas Médicas e chefe de Departamento de Virologia em universidade.</p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="floatFix"></div>
+                </div>
+            </div>
+
+            <div id="ativ-4">
+                <section class="col-xs-12">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio explicabo harum cumque placeat numquam voluptas. Quis voluptatum, ab error labore debitis asperiores et eos pariatur ullam dicta at hic laboriosam architecto eveniet repellat tempora neque officia dolores cum ducimus? Aut minima repellat eos quos.</p>
+                    <p>Read the article.</p>
+                </section>
+                <section class="grupo-vt">
+                    <div class="artigo">
+                        <div class="artigo-text">
+                            <a href="pdf/Artigo_2.pdf" target="_blank"><i class="fas fa-file-pdf fa-2x fa-fw"></i></a>
+                        </div>
+                        <div class="artigo-text">
+                        <a href="pdf/Artigo_2.pdf" target="_blank">Article 2: Paternidade a Dois</a>
+                        <a href="http://super.abril.com.br/saude/paternidade-a-dois/" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: Super Interessante</h6></a>
+                        </div>
+                    </div>
+                </section>
+                <div class="floatFix"></div>
+
+                <section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corrupti, eos rem corporis officiis deleniti, excepturi quo fugit rerum, magnam totam vitae dolorem, numquam qui sunt <i><a href="http://www.ithenticate.com/" target="_blank">iThenticate</a></i> lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis molestias saepe quos ullam suscipit similique, vitae consequuntur architecto. Dolores commodi nihil nisi error, animi non illum praesentium, incidunt suscipit, iste ea quaerat aspernatur facere dignissimos unde sint quia in saepe.</p>
+                <a href="http://blog.scielo.org/blog/2013/10/02/etica-editorial-e-o-problema-do-plagio/" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: SciELO</h6></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam pariatur necessitatibus blanditiis, tenetur natus incidunt, ullam fugiat excepturi laboriosam similique sed, esse harum iste autem maiores beatae. Explicabo, nesciunt error! Dignissimos voluptate vitae voluptatibus a voluptates repellendus animi officia tempora.</p>
+                </section>
+
+                <section class="grupo-vt">
+                    <div class="artigo">
+                        <div class="artigo-text">
+                            <a href="pdf/Artigo_3.pdf" target="_blank"><i class="fas fa-file-pdf fa-2x fa-fw"></i></a>
+                        </div>
+                        <div class="artigo-text">
+                        <a href="pdf/Artigo_3.pdf" target="_blank">Article 3: Inovação e propriedade intelectual: guia para o docente</a>
+                        <a href="http://www.inpi.gov.br/sobre/arquivos/guia_docente_iel-senai-e-inpi.pdf" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: Super Interessante</h6></a>
+                        </div>
+                    </div>
+                </section>
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque">
+                        <h5 class="page-header">Exercise 4: columns association</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem harum facilis ipsa, tempore neque, nulla.</p>
+                    </section>
+
+                    <div class="row">
+                        <div class="card col-xs-5">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><input type="text" id="blank_a4" class="col-xs-1 blank_mr"> Lorem ipsum dolor sit amet</li>
+                            <li class="list-group-item"><input type="text" id="blank_c4" class="col-xs-1 blank_mr"> Lorem ipsum dolor sit amet</li>
+                            <li class="list-group-item"><input type="text" id="blank_e4" class="col-xs-1 blank_mr"> Lorem ipsum dolor sit amet</li>
+                            <li class="list-group-item"><input type="text" id="blank_d4" class="col-xs-1 blank_mr"> Lorem ipsum dolor sit amet</li>
+                            <li class="list-group-item"><input type="text" id="blank_b4" class="col-xs-1 blank_mr"> Lorem ipsum dolor sit amet</li>
+                            </ul>
+                            <input type="button" class="btn btn-default" value="Corrigir" onclick="t2_a4()">
+                        </div>
+
+                        <div class="card col-xs-6 col-xs-offset-1 hidden-xs">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>(A)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quidem quod eaque deleniti, ipsum, quae ipsa.</li>
+                            <li class="list-group-item"><strong>(B)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                            <li class="list-group-item"><strong>(C)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quidem quod eaque deleniti, ipsum, quae ipsa.</li>
+                            <li class="list-group-item"><strong>(D)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quidem quod eaque deleniti, ipsum, quae ipsa.</li>
+                            <li class="list-group-item"><strong>(E)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quidem quod eaque deleniti, ipsum, quae ipsa.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="ativ-5">
+                <section class="col-xs-12">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quasi, architecto!?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis libero nam recusandae saepe incidunt earum distinctio culpa consequuntur ipsa praesentium, impedit odio nisi iure, obcaecati necessitatibus sapiente asperiores? Esse nam inventore ipsa eos voluptatibus, iure.</p>
+                </section>
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque">
+                        <h5 class="page-header">Exercise 5: Curriculum Lattes</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo culpa, pariatur.</p>
+                    </section>
+
+                    <section class="grupo-vt">
+                        <div class="artigo">
+                            <div class="artigo-text">
+                                <a href="http://lattes.cnpq.br/" target="_blank"><i class="fas fa-university fa-2x fa-fw"></i></a>
+                            </div>
+                            <div class="artigo-text">
+                                <a href="http://lattes.cnpq.br/" target="_blank">Plataforma Lattes: create or update your curriculum here</a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="floatFix"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<script src="js/t2_a3.js"></script>
+<script src="js/t2_a4.js"></script>
+</body>
+</html>

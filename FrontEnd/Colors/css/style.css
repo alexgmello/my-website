@@ -1,0 +1,507 @@
+/*
+Roxo Claro: #a1a3d4
+Roxo Highlight: #8156ff
+Roxo Médio: #5e65ae
+Roxo Escuro: #5c0bad
+Salmão Médio: #de8778
+Texto Claro: #e6e0e3
+Texto Escuro: #222
+Correto: #81ff72
+Errado: #ff8484
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url(../img/sunset-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1002px;
+    padding: 0;
+    padding-top: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: rgba(245, 245, 245, 0.75);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    font-family: Calibri, sans-serif;
+}
+
+h1 {
+    color: #5e65ae !important;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+h2, h3 {
+    color: #ec8f0c;
+    margin-top: 0;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    padding-left: 55px;
+    padding-right: 55px;
+    font-size: 20px;
+    color: #ec8f0c;
+}
+
+h5 {
+    padding-top: 10px;
+    font-size: 20px;
+    color: #FF9500;
+    margin-top: 0;
+    font-size: 22px;
+}
+
+h6 {
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+p {
+    margin-bottom: 8px;
+    color: #222 !important;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+p:last-of-type {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    color: #5c0bad;
+    font-size: 16px;
+}
+
+a:hover {
+    color: #460c7f;
+}
+
+a:focus {
+    text-decoration: none;
+    outline: none;
+    outline-style: none;
+    color: #460c7f;
+}
+
+.panel-title a:hover {
+    color: #999;
+}
+
+video {
+    display: inline;
+}
+
+/************************************************/
+
+.page-header {
+    padding: 22px 40px 21px 40px;
+    border-bottom: 0px solid #00437d;
+    margin: -15px 0 25px 0;
+    color: #f1f1f1;
+}
+
+.titulo-curso {
+    font-size: 44px;
+    padding: 25px 0px 0px 50px;
+}
+
+.col-xs-2 {
+    padding: 0;
+}
+
+.col-xs-12 {
+    padding: 0;
+}
+
+#intro .col-xs-12 h3 {
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
+.well {
+    background-color: rgba(239, 245, 251, 0.8);
+    border: 0px solid;
+    padding: 0;
+    margin-bottom: 0;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.05);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.05);
+}
+
+.well .page-header {
+    margin-bottom: 0;
+}
+
+.centralizar {
+    text-align: center;
+    margin: auto;
+}
+
+.nav-stacked li+li {
+    margin-top: 0;
+}
+
+.nav-pills>li>a:hover {
+    background-color: transparent;
+    color: #8156ff;
+}
+
+.nav-pills>li.active>a:hover {
+    color: #ec8f0c;
+}
+
+.nav-pills>li.active>a {
+    background-color: transparent !important;
+    color: #de8778 !important;
+}
+
+.menu-fixed {
+    position: fixed;
+}
+
+.list-group-item {
+    background-color: #e2e7ef;
+    border: 1px solid #f79a8a;
+    color: #222;
+}
+
+.panel-default {
+    border-color: #127ED2;
+}
+
+.btn {
+    font-family: Calibri;
+    font-size: 18px;
+    width: 150px;
+}
+
+.btn-default, .btn:focus {
+    color: #fff;
+    background-color: #de8778;
+    border-color: #de8778;
+    border-radius: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #f79a8a;
+    border-color: #f79a8a;
+    color: #fff;
+}
+
+.row {
+    padding: 20px 55px;
+    padding-top: 0;
+}
+
+.card-body p {
+    padding: 0px 20px;
+}
+
+.text-muted {
+    color: #ababab;
+    display: inline-block;
+}
+
+.text-muted:hover {
+    text-decoration: underline;
+    text-decoration-color: #ababab;
+}
+
+/**************************************************/
+
+.fa-thumbtack {
+    color: #127ed2;
+}
+
+.fa-file-pdf {
+    color: #ca170e;
+}
+
+/**************************************************/
+
+#well-index .well {
+    background-color: transparent;
+}
+
+.img-header {
+    background: url(../img/sunset-sm1.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ul-menu {
+    border-right: 2px solid #a1a3d4;
+    width: 108%;
+    padding-left: 4px;
+}
+
+#home {
+    height: 500px;
+}
+
+#home .page-header {
+    background-color: transparent;
+    background-image: none;
+    margin-bottom: 0;
+}
+
+#home ul {
+    list-style: decimal;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+#intro h3:nth-of-type(n+1) {
+    font-size: 21px;
+    margin-top: 0px;
+}
+
+#intro h3:nth-of-type(n+2) {
+    margin-top: 15px;
+}
+
+#intro span {
+    font-size: 15px;
+    transform: rotate(-45deg);
+    display: inline-block;
+    position: relative;
+    top: -8px;
+}
+
+#intro p {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+}
+
+#intro .col-xs-12:last-child p:last-of-type {
+    margin-bottom: 30px;
+}
+
+.intro {
+    display: inline-block;
+    padding: 10px 60px;
+    margin: auto;
+}
+
+.intro p {
+    padding: 0;
+    color: #f1f1f1;
+}
+
+.intro .artigo {
+    margin-left: 0;
+}
+
+.intro .artigo-text {
+    text-align: left;
+}
+
+.intro-text {
+    padding: 0px 0px 10px 0px;
+    color: #f1f1f1;
+    text-align: left;
+    font-size: 15px;
+}
+
+.floatFix {
+    clear: both;
+}
+
+.exercicio {
+    border: 2px solid #de8778;
+}
+
+.exercicio p {
+    line-height: 22px;
+}
+
+.destaque {
+    padding: 20px 0;
+    background-color: #de8778;
+    color: #f1f1f1;
+    box-sizing: border-box;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.destaque .page-header {
+    background-color: transparent;
+    padding: 10px 55px 0px 55px;
+    border-bottom: 0px solid #127ED2;
+    margin-bottom: 10px;
+}
+
+.destaque p {
+    color: #f1f1f1 !important;
+    margin: 8px 0px;
+}
+
+.banco-palavras {
+    padding-left: 55px;
+    padding-right: 55px;
+    text-align: center;
+}
+
+.banco-palavras ul {
+    text-align: left;
+    margin: 0;
+}
+
+.grupo-vt {
+    margin-top: 13px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+/*
+.artigo {
+    width: 48%;
+    display: inline-block;
+    padding: 0px 0px;
+    margin-bottom: 20px;
+    margin-left: 55px;
+    background-color: #5e65ae;
+    float: left;
+}
+
+.artigo-text {
+    border-left: 0;
+    width: 16%;
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 15px 15px 15px 25px;
+    color: #EF8C00;
+}
+
+.artigo-text a:first-child {
+    color: #e6e0e3;
+}
+
+.artigo-text:last-child {
+    width: 64%;
+    text-align: right;
+    float: right;
+    margin-left: 0;;
+}
+
+.artigo-text:last-child a:first-child {
+    font-size: 18px;
+}
+
+.artigo-text h6 {
+    padding-right: 0;
+    padding-left: 0;
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 15px;
+}
+*/
+
+.artigo {
+    width: 48%;
+    display: inline-block;
+    padding: 0px 0px;
+    margin-bottom: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.artigo-text {
+    border-left: 0;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.artigo-text a:first-child {
+    color: #5c0bad;
+    font-size: 16px;
+}
+
+.artigo-text:last-child {
+    width: 85%;
+    margin-left: 0px;
+    line-height: 32px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.artigo-text h6 {
+    padding-right: 0;
+    padding-left: 0;
+    display: inline-block;
+    float: right;
+}
+
+.artigo-ex {
+    padding-left: 7%;
+}
+
+.opacidade {
+    opacity: 1;
+}
+
+.reset {
+    background-color: #ab2a2a;
+    border-color: #ab2a2a;
+}
+
+.reset:hover {
+    background-color: #580707;
+    border-color: #580707;
+}
+
+.ajs-modal:focus {
+    outline: 0 transparent !important;
+    outline-style: none;
+}
+
+#intro .resumo p {
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+/***********************************************************/
+
+@media screen and (max-width:768px){
+    #home {
+        height: 684px;
+    }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 3</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+    <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+
+	<script>
+		$(function(){
+			//onload --- ao carregar a pagina
+
+            $("#ativ-5").hide();
+
+            $("#infFour").on("click", function(){
+                $("#infFour h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            $("#infFive").on("click", function(){
+                $("#infFive h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+			//quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+
+                //Intro
+                if(valor == "intro"){
+					$("#ativ-5").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //Ativ-5
+                if(valor == "ativ-5"){
+					$("#intro").hide();
+					$("#ativ-5").fadeIn(500);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-2">
+			<!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+				<li><a href="#" data-value="ativ-5"><span><i class="fas fa-pencil-alt"></i></span> Activity 5</a></li>
+			</ul>
+		</div>
+
+        <div class="well col-xs-10">
+            <h1 class="page-header img-header">3. Deserunt ex, obcaecati</h1>
+
+            <div id="intro">
+                <section class="col-xs-12">
+                    <h2>Molestiae nulla, neque provident laborum:</h2>
+                    <ul>
+                        <li><span><i class="fas fa-thumbtack fa-sm fa-fw"></i></span> Quo consequatur: <i>culpa aspernatur</i> e <i>accusantium quaerat</i>.</li>
+                        <li><span><i class="fas fa-thumbtack fa-sm fa-fw"></i></span> Fugiat dolore.</li>
+                    </ul>
+                </section>
+                <section class="col-xs-12">
+                    <section class="grupo-vt">
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> O Sistema Internacional de Unidades</h4>
+                        </div>
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+                        <div id="infFour" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseFour">
+                           <p class="text-muted no-decor"><strong>Source:</strong> Banco Internacional de Objetos Educacionais (BIOE).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 3 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Anderson Coser Gaudio.</p>
+                        </div>
+                    </div>
+
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> Os prefixos do Sistema Internacional de Unidades</h4>
+                        </div>
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+                        <div id="infFive" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseFive">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco Internacional de Objetos Educacionais (BIOE).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 2 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Anderson Coser Gaudio.</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="floatFix"></div>
+                </section>
+			</div>
+
+            <div id="ativ-5">
+                <div class="exercicio">
+                <section class="destaque">
+                <h5 class="page-header">Exercise 5: columns association</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex iusto eum doloribus, a sequi, facilis unde, in nisi libero architecto et consectetur! Odio dolore reiciendis, nesciunt inventore praesentium commodi exercitationem!</p>
+                </section>
+
+                <div class="row">
+                <div class="card col-xs-5">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><input type="text" id="blank_i5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_b5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_g5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_f5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_e5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_c5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_d5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_a5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_h5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_j5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+                    <li class="list-group-item"><input type="text" id="blank_k5" class="col-xs-1 blank_mr"> Mollitia magni sit laudantium, ab iure</li>
+
+                    <input type="button" class="btn btn-default" value="Corrigir" onclick="exercicio_5()">
+                </ul>
+                </div>
+
+                <div class="card col-xs-5 col-xs-offset-2 hidden-xs">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>(A)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(B)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(C)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(D)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(E)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(F)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(G)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(H)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(I)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(J)</strong> Totam blanditiis sint</li>
+                    <li class="list-group-item"><strong>(K)</strong> Totam blanditiis sint</li>
+                </ul>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/exercicio_5.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    background-color: #eeeeee;
+    font-family: Tahoma;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+/************* HEADER **************/
+#topo {
+    background-color: rgba(32, 32, 32, 0.5);
+    height: auto;
+    width: 100%;
+    padding: 30px 0;
+    display: table;
+    z-index: 1;
+    position: absolute;
+}
+
+.container {
+    width: 95%;
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+}
+
+#logo {
+    float: left;
+}
+
+#menu {
+    float: right;
+    margin-top: 20px;
+}
+
+#menu a {
+
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+#menu a:last-child {
+    margin-right: 0;
+}
+
+#menu a:hover {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+#banner {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#banner img {
+    width: 100%;
+}
+
+/************* DESTAQUE **************/
+
+#destaque {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+    position: absolute;
+    width: 95%;
+    max-width: 1000px;
+    bottom: 20px;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#destaque h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+#destaque p {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+/************* COLUNAS **************/
+
+.coluna {
+    width: 22%;
+    text-align: left;
+    float: left;
+    margin-right: 4%;
+}
+
+.coluna:last-child {
+    margin-right: 0;
+}
+
+.coluna img {
+    width: 100%; /* 100% da coluna */
+}
+
+.coluna h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.coluna p {
+    font-size: 13px;
+    color: #666;
+}
+
+.coluna a {
+    font-size: 12px;
+    color: #fff;
+    background-color: #003366;
+    padding: 6px 18px;
+    display: inline-block;
+}
+
+.coluna form {
+    margin-top: 13px;
+}
+
+.coluna label {
+    font-size: 13px;
+    color: #666;
+}
+
+.coluna input[type="text"], input[type="email"] {
+    height: 25px;
+    width: 220px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ccc;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.coluna input[type="submit"] {
+    font-size: 12px;
+    color: #fff;
+    background-color: #003366;
+    padding: 6px 18px;
+    border: none;
+}
+
+/************* RODAPE **************/
+
+#rodape {
+    height: 50px;
+    width: 100%;
+    background-color: #202020;
+    text-align: center;
+    clear: both;
+    color: #ccc;
+    font-size: 12px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    float: left;
+    margin-top: 30px;
+}
+
+/************* MEDIA QUERIE **************/
+
+@media screen and (max-width:1000px) {
+    #topo {
+        text-align: center;
+    }
+
+    #logo, #menu {
+        float: none;
+    }
+}
+
+@media screen and (max-width:767px) {
+    #destaque {
+        position: static;
+        background-color: #003366;
+        margin-top: 30px;
+        width: 100%; /* do 'container' */
+    }
+
+    .coluna {
+        width: 100%;
+    }
+
+    .coluna img {
+        width: 40%;
+        float: left;
+        margin: 10px 10px 10px 0;
+    }
+
+    .coluna:last-child img {
+        display: none;
+    }
+
+    .coluna a {
+        margin-bottom: 10px;
+    }
+
+
+}
+
+@media screen and (max-width:639px) {
+    #topo {
+        position: static;
+        background-image: url(img/banner.jpg);
+        background-size: auto 100%;
+    }
+
+    #banner img {
+        display: none;
+    }
+
+    #menu a {
+        display: block;
+    }
+}

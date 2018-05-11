@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 3</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+    <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+
+	<script>
+		$(function(){
+			//onload --- ao carregar a pagina
+            document.getElementById("vid_4")
+                .addEventListener("loadedmetadata",
+                    function() {
+                                this.currentTime = 0.7;
+                                },
+                                false);
+
+            $("#ativ-6").hide();
+            $("#ativ-7").hide();
+            $("#ativ-8").hide();
+
+            $("#infFour").on("click", function(){
+                $("#infFour h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+            $("#infFive").on("click", function(){
+                $("#infFive h6 i").toggleClass("fa-plus fa-minus");
+            })
+
+			//quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+
+                //Intro
+                if(valor == "intro"){
+					$("#ativ-6, #ativ-7, #ativ-8").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //Ativ-6
+                if(valor == "ativ-6"){
+					$("#intro, #ativ-7, #ativ-8").hide();
+					$("#ativ-6").fadeIn(500);
+				}
+
+                //Ativ-7
+                if(valor == "ativ-7"){
+					$("#intro, #ativ-6, #ativ-8").hide();
+					$("#ativ-7").fadeIn(500);
+				}
+
+                //Ativ-8
+                if(valor == "ativ-8"){
+					$("#intro, #ativ-6, #ativ-7").hide();
+					$("#ativ-8").fadeIn(500);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-2">
+			<!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+				<li><a href="#" data-value="ativ-6"><span><i class="fas fa-pencil-alt"></i></span> Activity 6</a></li>
+				<li><a href="#" data-value="ativ-7"><span><i class="fas fa-pencil-alt"></i></span> Activity 7</a></li>
+				<li><a href="#" data-value="ativ-8"><span><i class="fas fa-pencil-alt"></i></span> Activity 8</a></li>
+			</ul>
+		</div>
+
+        <div class="well col-xs-10">
+            <h1 class="page-header img-header">3. Lorem ipsum dolor sit amet, consectetur.</h1>
+
+            <div id="intro">
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Lorem:</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero molestias quibusdam velit delectus! Culpa dolore temporibus, laudantium, praesentium iste adipisci magnam totam hic, necessitatibus ducimus, at fugiat asperiores eaque odio?</p>
+                </section>
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Ipsum:</h2>
+                    <h3>Lorem ipsum dolor: consectetur adipisicing.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto laborum corporis, aliquid necessitatibus, porro id quisquam suscipit minima quos temporibus tenetur perferendis voluptas officiis dolores ut ad?</p>
+                </section>
+			</div>
+
+            <div id="ativ-6">
+                <section class="col-xs-12">
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime tempora quasi, numquam cumque, ad quisquam ducimus porro reiciendis aliquam quis, autem, cupiditate dicta provident?</p>
+                </section>
+
+                <section class="grupo-vt">
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> HIV Life Cycle</h4>
+                        </div>
+                        <video id="vid_4" class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+                        <div id="infFour" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseFour">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco de Objetos Educacionais do Ministério da Educação (BIOE/MEC).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 5 min</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Howard Hughes Medical Institute (HHMI)</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 6: crosswords</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia aliquam iure reprehenderit a quasi suscipit.</p>
+                </section>
+
+                <section class="grupo-vt">
+                    <div class="artigo">
+                        <div class="artigo-text">
+                            <a href="cruzada.html" target="_blank"><img src="img/icon_crosswords.png" alt=""></a>
+                        </div>
+                        <div class="artigo-text artigo-text-sm">
+                            <a href="cruzada.html" target="_blank">Open crosswords.</a>
+                        </div>
+                    </div>
+                    <div class="floatFix"></div>
+                </section>
+                </div>
+            </div>
+
+            <div id="ativ-7">
+                <section class="col-xs-12">
+                    <h3>Lorem ipsum dolor adipisicing</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure impedit ipsum aperiam, quis, cupiditate sint quas? Repellat quisquam debitis culpa laborum est pariatur inventore iste cum minus, nisi quaerat rem sequi libero, illum architecto ullam eveniet officiis voluptates quos ex fuga consequatur earum voluptas. Porro aspernatur incidunt sed iusto deleniti.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium veniam id dignissimos, cumque, numquam facilis architecto! Ratione recusandae sunt est repellat optio excepturi libero fugiat vero porro eaque quibusdam, similique dolorem nam fuga?</p>
+                </section>
+
+                <section class="grupo-vt">
+                    <div class="vid-grupo">
+                        <div class="vid-text">
+                        <h4><i class="fas fa-video fa-sm"></i> Medições - Introdução</h4>
+                        </div>
+                        <video class="vid-player" controls>
+                        <source src="videos/sample_video.mp4" type='video/mp4'>
+                        </video>
+                        <div id="infFive" id="accordion">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="card-subtitle mb-2 text-muted" style="text-align: right;"><h6 class="card-subtitle mb-2 text-muted"><span><i class="fas fa-plus fa-xs fa-fx"></i></span> Info</h6></a>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseFive">
+                            <p class="text-muted no-decor"><strong>Source:</strong> Banco Internacional de Objetos Educacionais (BIOE).</p>
+                            <p class="text-muted no-decor"><strong>Duration:</strong> 4 min.</p>
+                            <p class="text-muted no-decor"><strong>Author:</strong> Anderson Coser Gaudio.</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="floatFix"></div>
+
+                <div class="col-xs-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugit vero consequatur ratione nesciunt asperiores minima: <a href="pdf/Artigo_4.pdf#page=16" target="_blank"><strong>1.1</strong></a>, <a href="pdf/Artigo_4.pdf#page=17" target="_blank"><strong>1.4</strong></a>, <a href="pdf/Artigo_4.pdf#page=18" target="_blank"><strong>1.6</strong></a>, <a href="pdf/Artigo_4.pdf#page=20" target="_blank"><strong>1.10</strong></a> and <a href="pdf/Artigo_4.pdf#page=22" target="_blank"><strong>1.16</strong></a>.</p>
+
+                    <section class="grupo-vt">
+                        <div class="artigo">
+                            <div class="artigo-text">
+                                <a href="pdf/Artigo_4.pdf#page=16" target="_blank"><i class="fas fa-file-pdf fa-2x fa-fw"></i></a>
+                            </div>
+                            <div class="artigo-text">
+                            <a href="pdf/Artigo_4.pdf#page=16" target="_blank">Article 4: Vocabulário Internacional de Metrologia (VIM)</a>
+                            <a href="http://www.inmetro.gov.br/inovacao/publicacoes/vim_2012.pdf" target="_blank" class="card-subtitle mb-2 text-muted" style="text-align: right;" target="_blank"><h6 class="card-subtitle mb-2 text-muted">Source: INMETRO</h6></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 7: fill the blanks</h5>
+                    <p>Word bank: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="banco-palavras">
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> base</li>
+                        <li><input id="checkBox" type="checkbox"> Grandeza</li>
+                        <li><input id="checkBox" type="checkbox"> outras</li>
+                        <li><input id="checkBox" type="checkbox"> nomes</li>
+                        <li><input id="checkBox" type="checkbox"> tempo</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> comprimento</li>
+                        <li><input id="checkBox" type="checkbox"> grandezas</li>
+                        <li><input id="checkBox" type="checkbox"> massa</li>
+                        <li><input id="checkBox" type="checkbox"> número</li>
+                        <li><input id="checkBox" type="checkbox"> Unidade</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> corpo</li>
+                        <li><input id="checkBox" type="checkbox"> Grandezas</li>
+                        <li><input id="checkBox" type="checkbox"> medida</li>
+                        <li><input id="checkBox" type="checkbox"> prefixos</li>
+                        <li><input id="checkBox" type="checkbox"> unidades</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> grandeza</li>
+                        <li><input id="checkBox" type="checkbox"> Internacional</li>
+                        <li><input id="checkBox" type="checkbox"> nenhuma</li>
+                        <li><input id="checkBox" type="checkbox"> temperatura</li>
+                        <li><input id="checkBox" type="checkbox"> Unidades</li>
+                    </ul>
+                    </div>
+                </section>
+
+                <div class="col-xs-12">
+                    <p>Lorem ipsum <input type="text" id="blank_a7"> dolor sit amet, consectetur <input type="text" id="blank_b7"> adipisicing elit. Doloremque optio minus corporis commodi error, fugit autem <input type="text" id="blank_c7"> tenetur voluptatem impedit reiciendis, eum enim cupiditate labore earum quidem quibusdam blanditiis.</p>
+                    <p>Facilis molestiae <input type="text" id="blank_d7"> neque cupiditate tempora numquam, quod sapiente eum perferendis. Possimus at <input type="text" id="blank_e7"> accusantium deleniti eligendi velit, laborum iusto! Minus, exercitationem earum. Incidunt perspiciatis modi excepturi <input type="text" id="blank_f7">, possimus omnis veniam.</p>
+                    <p>Ipsum dolores ut <input type="text" id="blank_g7"> magni <input type="text" id="blank_h7"> fugiat rerum eum tempora ab <input type="text" id="blank_i7"> et. Nesciunt fugiat <input type="text" id="blank_j7">, vel! Iusto <input type="text" id="blank_k7"> illo, corporis tenetur cum dolores blanditiis incidunt <input type="text" id="blank_l7">. Fugit necessitatibus assumenda quos nobis tenetur! Quos <input type="text" id="blank_m7">?</p>
+                    <p>Vitae fuga <input type="text" id="blank_n7"> consequuntur doloribus unde. Fuga dignissimos praesentium enim, quas, <input type="text" id="blank_o7"> aperiam repellendus quo odio expedita <input type="text" id="blank_p7"> tenetur, in, illo cupiditate dolorum molestias veniam assumenda <input type="text" id="blank_q7"> saepe voluptas aliquam ea harum.</p>
+                    <p>Earum nihil, a <input type="text" id="blank_r7"> facilis quidem illum dolore <input type="text" id="blank_s7"> labore architecto. Provident accusamus harum minus voluptates aliquam, <input type="text" id="blank_t7"> illum natus ut iure ea rerum dolorum. Minus porro et cupiditate <input type="text" id="blank_u7"> harum inventore.</p>
+
+                    <p><input type="button" class="btn btn-default" value="Corrigir" onclick="t3_a7()"></p>
+                </div>
+                <div class="floatFix"></div>
+                </div>
+            </div>
+
+            <div id="ativ-8">
+                <h3>Lorem ipsum dolor sit</h3>
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                <section class="destaque">
+                <h5 class="page-header">Exercise 8: columns association</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga tempora, quae possimus. Quod magni possimus molestiae modi ratione, minus iste consequuntur natus itaque, ducimus, blanditiis odio. Animi, possimus accusamus repellendus.</p>
+                </section>
+
+                <div class="row">
+                <div class="card col-xs-5">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Lorem ipsum dolor sit</strong></li>
+                    <li class="list-group-item"><input type="text" id="blank_b8" class="col-xs-1 blank_mr"> Lorem ipsum dolor</li>
+                    <li class="list-group-item"><input type="text" id="blank_g8" class="col-xs-1 blank_mr"> Lorem ipsum dolor</li>
+                    <li class="list-group-item"><input type="text" id="blank_f8" class="col-xs-1 blank_mr"> Lorem ipsum dolor</li>
+                    <li class="list-group-item"><input type="text" id="blank_e8" class="col-xs-1 blank_mr"> Lorem ipsum dolor</li>
+                    <li class="list-group-item"><input type="text" id="blank_c8" class="col-xs-1 blank_mr"> Lorem ipsum dolor</li>
+                    <li class="list-group-item"><input type="text" id="blank_d8" class="col-xs-1 blank_mr"> Lorem ipsum dolor</li>
+                    <li class="list-group-item"><input type="text" id="blank_a8" class="col-xs-1 blank_mr"> Lorem ipsum dolor</li>
+
+                    <input type="button" class="btn btn-default" value="Corrigir" onclick="t3_a8()">
+                </ul>
+                </div>
+
+                <div class="card col-xs-5 col-xs-offset-2 hidden-xs">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Lorem (ipsum)</strong></li>
+                    <li class="list-group-item"><strong>(A)</strong> Lorem (ipsum)</li>
+                    <li class="list-group-item"><strong>(B)</strong> Lorem (ipsum)</li>
+                    <li class="list-group-item"><strong>(C)</strong> Lorem (ipsum)</li>
+                    <li class="list-group-item"><strong>(D)</strong> Lorem (ipsum)</li>
+                    <li class="list-group-item"><strong>(E)</strong> Lorem (ipsum)</li>
+                    <li class="list-group-item"><strong>(F)</strong> Lorem (ipsum)</li>
+                    <li class="list-group-item"><strong>(G)</strong> Lorem (ipsum)</li>
+                </ul>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/t3_a7.js"></script>
+<script src="js/t3_a8.js"></script>
+</body>
+</html>

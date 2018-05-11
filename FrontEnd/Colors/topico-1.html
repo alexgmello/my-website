@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 1</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+	<link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-2">
+			<!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="ativ-1"><span><i class="fas fa-pencil-alt"></i></span> Activity 1</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-10 well">
+			<h1 class="page-header img-header">1. Consectetur adipisicing elit</h1>
+			<div id="ativ-1">
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 1: fill the blanks</h5>
+                    <p>Lorem ipsum dolor <a href="pdf/as_cores_do_ceu.pdf#page=3" target="_blank">páginas 3 - 5</a> amet, consectetur.</p>
+                    <p>Word bank: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, deleniti. Atque cum omnis harum nemo!</p>
+
+                    <div class="banco-palavras">
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> 300</li>
+                        <li><input id="checkBox" type="checkbox"> Frequência</li>
+                        <li><input id="checkBox" type="checkbox"> segundo</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> centímetro</li>
+                        <li><input id="checkBox" type="checkbox"> hertz</li>
+                        <li><input id="checkBox" type="checkbox"> vácuo</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> Comprimento</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> máximos</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> eletromagnética</li>
+                        <li><input id="checkBox" type="checkbox"> radiação</li>
+                    </ul>
+                    </div>
+                    </section>
+
+                    <div class="col-xs-12">
+                    <p>Lorem ipsum dolor sit <input type="text" id="blank_a1"> amet, <input type="text" id="blank_b1"> consectetur adipisicing elit. Odio ea optio alias amet deleniti rem pariatur, <input type="text" id="blank_c1"> cum illum ex suscipit autem, delectus.</p>
+                    <p>Nesciunt voluptatum quibusdam nihil eos, <input type="text" id="blank_d1"> perspiciatis accusamus quae, tenetur rem nulla, sed <input type="text" id="blank_e1"> assumenda asperiores. Dignissimos tempore, enim recusandae molestiae <input type="text" id="blank_f1"> autem saepe non!</p>
+                    <p><input type="text" id="blank_g1"> voluptates, quam sed nam unde iste iure deserunt perspiciatis <input type="text" id="blank_h1"> quibusdam consectetur placeat pariatur veritatis corrupti <input type="text" id="blank_i1"> harum suscipit porro, esse ab quasi adipisci <input type="text" id="blank_j1">.</p>
+                    <p>Beatae unde esse excepturi quae minus, natus quibusdam nihil magni, <input type="text" id="blank_k1">.</p>
+
+                    <p><input type="button" class="btn btn-default" value="Corrigir" onclick="exercicio_1()"></p>
+                    </div>
+                    <div class="floatFix"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<script src="js/exercicio_1.js"></script>
+</body>
+</html>

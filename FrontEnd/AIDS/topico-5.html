@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chapter 5</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jdropwords.css">
+    <link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+    <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+	<script src="alertifyjs/alertify.min.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<script>
+		$(function(){
+            $('#dropwords2').jDropWords({
+                answers : {
+                    "P1" : "R1",
+                    "P2" : "R2",
+                    "P3" : "R3",
+                    "P4" : "R4",
+                    "P5" : "R5",
+                    "P6" : "R6",
+                    "P7" : "R7"
+                }
+            });
+
+			//onload --- ao carregar a pagina
+            $("#ativ-12").hide();
+            $("#ativ-13").hide();
+            $("#ativ-14").hide();
+
+			//quando clicar no link (a) que esteja dentro de um elemento com a class="nav"
+			$(".nav a").on("click", function(){
+				$(".nav li").removeClass("active");
+
+				//adicionar a classe active no li do (a) que foi clicado
+				$(this).parent().addClass("active");
+
+				//pegar o valor do data-value
+				var valor = $(this).attr("data-value");
+
+                //Intro
+                if(valor == "intro"){
+					$("#ativ-12, #ativ-13, #ativ-14").hide();
+					$("#intro").fadeIn(500);
+				}
+
+                //ativ-12
+                if(valor == "ativ-12"){
+					$("#intro, #ativ-13, #ativ-14").hide();
+					$("#ativ-12").fadeIn(500);
+				}
+
+                //ativ-13
+                if(valor == "ativ-13"){
+					$("#intro, #ativ-12, #ativ-14").hide();
+					$("#ativ-13").fadeIn(500);
+				}
+
+                //ativ-14
+                if(valor == "ativ-14"){
+					$("#intro, #ativ-12, #ativ-13").hide();
+					$("#ativ-14").fadeIn(500);
+				}
+			});
+		});
+	</script>
+	<script>
+        $(window).load(function(){
+            $("#anima-1").on("click", function(){
+                var y = document.getElementById("jogo-1")
+                if(y.style.display == "none") {
+                    $("#jogos").children().fadeOut(5);
+                    y.style.display = "inline-block";
+                    $("#animacoes-1").children().removeClass("ativo");
+                    $(this).addClass("ativo");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $(this).removeClass("ativo");
+                }
+            });
+
+            $("#anima-2").on("click", function(){
+                var y = document.getElementById("jogo-2")
+                if(y.style.display == "none") {
+                    $("#jogos-2").children().fadeOut(5);
+                    y.style.display = "inline-block";
+                    $("#animacoes-2").children().removeClass("ativo");
+                    $(this).addClass("ativo");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $(this).removeClass("ativo");
+                }
+            });
+
+            $("#anima-3").on("click", function(){
+                var y = document.getElementById("jogo-3")
+                if(y.style.display == "none") {
+                    $("#jogos-2").children().fadeOut(5);
+                    y.style.display = "inline-block";
+                    $("#animacoes-2").children().removeClass("ativo");
+                    $(this).addClass("ativo");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $(this).removeClass("ativo");
+                }
+            });
+
+            $("#anima-4").on("click", function(){
+                var y = document.getElementById("jogo-4")
+                if(y.style.display == "none") {
+                    $("#jogos-2").children().fadeOut(5);
+                    y.style.display = "inline-block";
+                    $("#animacoes-2").children().removeClass("ativo");
+                    $(this).addClass("ativo");
+                }
+
+                else {
+                    y.style.display = "none";
+                    $(this).removeClass("ativo");
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-2">
+            <!-- criar menu vertical -->
+			<ul class="nav nav-pills nav-stacked menu-fixed">
+				<li><a href="index.html" data-value="home"><span><i class="fas fa-home"></i></span> Summary</a></li>
+				<li class="active"><a href="#" data-value="intro"><span><i class="fas fa-star"></i></span> Introduction</a></li>
+				<li><a href="#" data-value="ativ-12"><span><i class="fas fa-pencil-alt"></i></span> Activity 12</a></li>
+				<li><a href="#" data-value="ativ-13"><span><i class="fas fa-pencil-alt"></i></span> Activity 13</a></li>
+				<li><a href="#" data-value="ativ-14"><span><i class="fas fa-pencil-alt"></i></span> Activity 14</a></li>
+			</ul>
+        </div>
+        <div class="well col-xs-10">
+            <h1 class="page-header img-header">5. Vel, asperiores aspernatur error</h1>
+            <div id="intro">
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Lorem:</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, amet!</p>
+                    <p>Tempore eveniet officia dignissimos, vero vel repudiandae! Corporis, a, voluptate.</p>
+                    <p>Recusandae minus reprehenderit qui. Provident quos, officia quia error facere.</p>
+                    <p>Dolorem quos fuga recusandae ut libero, omnis cumque pariatur dolor.</p>
+                </section>
+                <section class="col-xs-12">
+                    <h2><span><i class="fas fa-thumbtack fa-fw"></i></span>Ipsum:</h2>
+                    <h3>Minus quam alias odit: magni</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem provident labore ipsum non delectus!</p>
+                    <h3>Quia totam tempore: libero</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magnam deleniti nihil quis beatae eveniet, voluptate doloremque.</p>
+                </section>
+            </div>
+
+            <div id="ativ-12">
+                <section class="col-xs-12">
+                    <h3>Molestias, explicabo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam mollitia sit neque nihil quaerat explicabo eveniet?</p>
+                    <p>Blanditiis ratione fugiat doloribus totam harum quidem, optio explicabo. Magni dolorum commodi laudantium dolore iste esse.</p>
+                </section>
+
+                <div class="floatFix"></div>
+
+                <div id="ancora-1"></div>
+                <section class="animacoes" id="animacoes-1" onclick="window.location='#ancora-1'">
+                    <div class="anima-box" id="anima-1">
+                        <div class="anima">
+                            <i class="fas fa-gamepad fa-7x"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis!</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="jogos">
+                    <div id="jogo-1" class="embed" style="display: none;">
+                        <embed src="videos/sample_video.mp4" width="100%" height="100%">
+                    </div>
+                </section>
+
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 class="page-header">Exercise 12: fill the blanks</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus maiores placeat, harum expedita et officia animi?</p>
+                    <p>Word bank: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia error unde possimus.</p>
+                    <div class="banco-palavras">
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> adenina</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> cromossomos</li>
+                        <li><input id="checkBox" type="checkbox"> núcleo</li>
+                        <li><input id="checkBox" type="checkbox"> ribose</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> cinco</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> DNA</li>
+                        <li><input id="checkBox" type="checkbox"> nucleotídeo</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> RNA</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> citoplasma</li>
+                        <li><input id="checkBox" type="checkbox"> duas</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> nucleotídeos</li>
+                        <li><input id="checkBox" type="checkbox"> timina</li>
+                    </ul>
+                    <ul class="col-xs-3">
+                        <li><input id="checkBox" type="checkbox"> cloroplastos</li>
+                        <li><input id="checkBox" type="checkbox"> m</li>
+                        <li><input id="checkBox" type="checkbox"><input id="checkBox" type="checkbox"> pentose</li>
+                        <li><input id="checkBox" type="checkbox"> t</li>
+                    </ul>
+                    </div>
+                    </section>
+
+                    <div class="col-xs-12">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit <input type="text" id="blank_a12">. Nemo sequi <input type="text" id="blank_b12"> reprehenderit <input type="text" id="blank_c12"> accusantium maxime, omnis aut ut accusamus, molestias quisquam velit, <input type="text" id="blank_d12"> alias laborum enim tempora sit, distinctio iste officia ab quos similique! Nemo, vitae suscipit.</p>
+                        <p>Saepe <input type="text" id="blank_e12"> provident non minus delectus atque <input type="text" id="blank_f12"> eum ab maxime ut suscipit incidunt quasi quidem debitis <input type="text" id="blank_g12"> voluptates, voluptate molestias reprehenderit excepturi <input type="text" id="blank_h12"> veniam aliquid, necessitatibus dicta repellat <input type="text" id="blank_i12">.</p>
+                        <p>Esse <input type="text" id="blank_j12"> exercitationem magnam impedit odit sed et dolores vel, incidunt deleniti <input type="text" id="blank_k12">, architecto officia quia. Dignissimos omnis, at ipsa! Voluptates neque magni fugiat enim iure nam quas reprehenderit! Assumenda <input type="text" id="blank_l12"> ipsa ut labore vero architecto ullam <input type="text" id="blank_m12">.</p>
+                        <p>Quam praesentium <input type="text" id="blank_n12"> vitae consequatur architecto, voluptatem eum numquam <input type="text" id="blank_o12"> suscipit voluptates eos itaque exercitationem unde autem <input type="text" id="blank_p12"> deserunt et perferendis culpa saepe magni quos soluta nulla <input type="text" id="blank_q12"> aperiam ex <input type="text" id="blank_r12">. Possimus provident doloremque ab rem quis earum dolor.</p>
+                        <p>Quam vero similique <input type="text" id="blank_s12"> doloremque, mollitia ex, consequatur magnam porro nostrum sequi <input type="text" id="blank_t12"> amet, reiciendis voluptatum doloribus adipisci velit aut cumque <input type="text" id="blank_u12"> tenetur nihil sed! Rerum quisquam veniam sapiente tenetur <input type="text" id="blank_v12"> necessitatibus ex voluptatum, itaque temporibus vero velit!</p>
+                        <p><input type="button" class="btn btn-default" value="Corrigir" onclick="t5_a12()"></p>
+                    </div>
+                    <div class="floatFix"></div>
+                </div>
+            </div>
+
+            <div id="ativ-13">
+                <section class="col-xs-12">
+                    <h3>Vero temporibus dolorem, a sapiente expedita</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, culpa.</p>
+                </section>
+                <div class="floatFix"></div>
+
+                <div id="ancora-2"></div>
+                <section class="animacoes" id="animacoes-2" onclick="window.location='#ancora-2'">
+                    <div class="anima-box" id="anima-2">
+                        <div class="anima">
+                            <i class="fas fa-gamepad fa-7x"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis!</p>
+                        </div>
+                    </div>
+
+                    <div class="anima-box" id="anima-3">
+                        <div class="anima">
+                            <i class="fas fa-gamepad fa-7x"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis!</p>
+                        </div>
+                    </div>
+
+                    <div class="anima-box" id="anima-4">
+                        <div class="anima">
+                            <i class="fas fa-gamepad fa-7x"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis!</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="jogos-2">
+                    <div id="jogo-2" class="embed" style="display: none;">
+                        <embed src="videos/sample_video.mp4" width="100%" height="100%">
+                    </div>
+
+                    <div id="jogo-3" class="embed" style="display: none;">
+                        <embed src="videos/sample_video.mp4" width="100%" height="100%">
+                    </div>
+
+                    <div id="jogo-4" class="embed" style="display: none;">
+                        <embed src="videos/sample_video.mp4" width="100%" height="100%">
+                    </div>
+                </section>
+
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque col-xs-12">
+                    <h5 id="ancora" class="page-header">Exercise 13: arrange the sentence</h5>
+                    <p>Voluptate, laborum quae dolor debitis asperiores vero quo, aperiam vel ex dolore.</p>
+                    </section>
+
+                    <div id="dropwords2" class="jdropwords col-xs-12">
+                        <ul class="words grupo-vt">
+                            <li class="word" id="R7">beatae.</li>
+                            <li class="word" id="R4">eius eaque,</li>
+                            <li class="word" id="R5">voluptatibus eos</li>
+                            <li class="word" id="R1">Culpa incidunt</li>
+                            <li class="word" id="R2">labore est</li>
+                            <li class="word" id="R6">velit</li>
+                            <li class="word" id="R3">suscipit nostrum</li>
+                        </ul>
+
+                        <div class="blanks">
+                            <p><span class="blank" id="P1"></span>
+                            <span class="blank" id="P2"></span>
+                            <span class="blank" id="P3"></span>
+                            <span class="blank" id="P4"></span>
+                            <span class="blank" id="P5"></span>
+                            <span class="blank" id="P6"></span>
+                            <span class="blank" id="P7"></span></p>
+                        </div>
+
+                        <div class="actions">
+                            <a class="btn btn-default reset">Restart</a>
+                            <a class="btn btn-default submit">Submit</a>
+                        </div>
+                    </div>
+                    <div class="floatFix"></div>
+                </div>
+            </div>
+
+            <div id="ativ-14">
+                <section class="col-xs-12">
+                    <h3>Explicabo totam iusto</h3>
+                </section>
+
+                <div class="floatFix"></div>
+                <div class="exercicio">
+                    <section class="destaque">
+                    <h5 class="page-header">Exercise 14: columns association</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus impedit similique consectetur delectus consequatur, debitis sed. Est distinctio repellendus architecto iure, repellat aliquam.</p>
+                    </section>
+
+                    <div class="row">
+                    <div class="card col-xs-4">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><input type="text" id="blank_c14" class="col-xs-1 blank_mr"> Transcrição</li>
+                        <li class="list-group-item"><input type="text" id="blank_d14" class="col-xs-1 blank_mr"> Transcrição</li>
+                        <li class="list-group-item"><input type="text" id="blank_a14" class="col-xs-1 blank_mr"> Transcrição</li>
+                        <li class="list-group-item"><input type="text" id="blank_b14" class="col-xs-1 blank_mr"> Transcrição</li>
+                        <li class="list-group-item"><input type="text" id="blank_h14" class="col-xs-1 blank_mr"> Transcrição</li>
+                        <li class="list-group-item"><input type="text" id="blank_g14" class="col-xs-1 blank_mr"> Tradução</li>
+                        <li class="list-group-item"><input type="text" id="blank_e14" class="col-xs-1 blank_mr"> Tradução</li>
+                        <li class="list-group-item"><input type="text" id="blank_f14" class="col-xs-1 blank_mr"> Tradução</li>
+
+                        <input type="button" class="btn btn-default" value="Corrigir" onclick="t5_a14()">
+                    </ul>
+                    </div>
+
+                    <div class="card col-xs-7 col-xs-offset-1 hidden-xs">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>(A)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item"><strong>(B)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item"><strong>(C)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item"><strong>(D)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item"><strong>(E)</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item"><strong>(F)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item"><strong>(G)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item"><strong>(H)</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="floatFix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/t5_a12.js"></script>
+<script src="js/t5_a14.js"></script>
+<script src="js/jdropwords.js"></script>
+</body>
+</html>

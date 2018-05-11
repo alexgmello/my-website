@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Gourmet House</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="KillTheLights.css">
+
+    <link rel="stylesheet" href="nivo-slider/nivo-slider.css">
+
+    <script src="nivo-slider/jquery-1.11.1.min.js"></script>
+    <script src="nivo-slider/jquery.nivo.slider.js"></script>
+    <script>
+
+        $(window).load(function() {
+            $('#banner').nivoSlider();
+
+            var alturaBanner = $("#banner img").height();
+            $("#opacidade").height(alturaBanner);
+
+            $(window).resize(function() {
+                var alturaBanner = $("#banner img").height();
+                $("#opacidade").height(alturaBanner);
+            });
+
+            $('#btn-menu').click(function() {
+                $(this).toggleClass('fechar','');
+                $('#menu-mob').slideToggle();
+            })
+         });
+    </script>
+
+</head>
+<body>
+        <div id="opacidade">
+            <div class="container">
+                <header id="topo">
+                    <div id="logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <nav id="menu">
+                        <a href="#">HOME</a>
+                        <a href="#">QUEM SOMOS</a>
+                        <a href="#">CARDÁPIO</a>
+                        <a href="#">O ESPAÇO</a>
+                        <a href="#">LOCALIZAÇÃO</a>
+                        <a href="#">CONTATO</a>
+                    </nav>
+                </header>
+                <article id="txt-banner">
+                    <h1>SOFISTICAÇÃO E CONFORTO</h1>
+                    <div class="separador">
+                        <img src="img/linha-decorativa.png" alt="">
+                    </div>
+                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation urper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseq.</p>
+                </article>
+            </div>
+        </div>
+
+        <div id="banner">
+            <img src="img/banner1.jpg" alt="">
+            <img src="img/banner2.jpg" alt="">
+            <img src="img/banner3.jpg" alt="">
+        </div>
+
+<!-------------------- TOPO MOBILE INICIO ---------------------->
+        <header id="topo-mob">
+                    <div id="logo-mob">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div id="btn-menu" class="">
+                        <div class="barra-1"></div>
+                        <div class="barra-2"></div>
+                        <div class="barra-3"></div>
+                    </div>
+                    <nav id="menu-mob">
+                        <a href="#">HOME</a>
+                        <a href="#">QUEM SOMOS</a>
+                        <a href="#">CARDÁPIO</a>
+                        <a href="#">O ESPAÇO</a>
+                        <a href="#">LOCALIZAÇÃO</a>
+                        <a href="#">CONTATO</a>
+                    </nav>
+                </header>
+
+
+<!-------------------- TOPO MOBILE FIM ---------------------->
+
+    <div class="container">
+        <section id="principal">
+            <article id="principal-esq">
+                <h2>Conheça nossa Carta de Vinhos</h2>
+                <img src="img/img-vinho.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. Vestibulum elem entum tincidunt ligula ultrices dapibus. In ac elit vel enim ornare elementum a nec orci.</p>
+                <p>Maecenas libero tellus, convallis quis turpis a, fermentum dictum purus. Ut sed rhoncus ex, quis gravida justo. Pellentesque pretium metus mi, et venenatis metus tempus.</p>
+                <a href="#" class="btn-saibaMais">Saiba Mais</a>
+            </article>
+
+            <article id="principal-dir">
+                <h2>Por trás do Sabor</h2>
+                <img src="img/img-sabor.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. Vestibulum elem entum tincidunt ligula ultrices dapibus. In ac elit vel enim ornare elementum a nec orci.</p>
+                <p>Maecenas libero tellus, convallis quis turpis a, fermentum dictum purus. Ut sed rhoncus ex, quis gravida justo. Pellentesque pretium metus mi, et venenatis metus tempus.</p>
+                <a href="#" class="btn-saibaMais">Saiba Mais</a>
+            </article>
+        </section>
+
+        <div class="separador">
+            <img src="img/linha-decorativa.png" alt="">
+        </div>
+
+        <section id="secundaria">
+            <article>
+                <h3>Nossos cozinheiros</h3>
+                <picture>
+                    <source srcset="img/img-cozinheiros-mob.jpg" media="(max-width:480px)">
+                    <img src="img/img-cozinheiros.jpg" alt="">
+                </picture>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper, sem eget blandit auctor, sem libero dapibus erat, aullam corper nisi quam sed ex donec auctor cursus tortor et.</p>
+                <a href="#" class="btn-saibaMais">Saiba Mais</a>
+            </article>
+            <article>
+                <h3>Happy Hour</h3>
+                <picture>
+                    <source srcset="img/img-happy-hour-mob.jpg" media="(max-width:480px)">
+                    <img src="img/img-happy-hour.jpg" alt="">
+                </picture>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper, sem eget blandit auctor, sem libero dapibus erat, aullam corper nisi quam sed ex donec auctor cursus tortor et.</p>
+                <a href="#" class="btn-saibaMais">Saiba Mais</a>
+            </article>
+            <article>
+                <h3>A melhor Pizza</h3>
+                <picture>
+                    <source srcset="img/img-pizza-mob.jpg" media="(max-width:480px)">
+                    <img src="img/img-pizza.jpg" alt="">
+                </picture>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper, sem eget blandit auctor, sem libero dapibus erat, aullam corper nisi quam sed ex donec auctor cursus tortor et.</p>
+                <a href="#" class="btn-saibaMais">Saiba Mais</a>
+            </article>
+            <article>
+                <h3>Faça sua reserva</h3>
+                <picture>
+                    <source srcset="img/img-reserva-mob.jpg" media="(max-width:480px)">
+                    <img src="img/img-reserva.jpg" alt="">
+                </picture>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper, sem eget blandit auctor, sem libero dapibus erat, aullam corper nisi quam sed ex donec auctor cursus tortor et.</p>
+                <a href="#" class="btn-saibaMais">Saiba Mais</a>
+            </article>
+        </section>
+
+        <div class="separador">
+            <img src="img/linha-decorativa.png" alt="">
+        </div>
+
+        <footer id="rodape">
+            GOURMET HOUSE  TODOS OS DIREITOS RESERVADOS<br>
+            AVENIDA VIEIRA SOUTO 185 - IPANEMA - RIO DE JANEIRO - RJ
+        </footer>
+    </div>
+</body>
+</html>

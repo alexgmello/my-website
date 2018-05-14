@@ -207,6 +207,7 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
 .repertoire h3 {
     font-weight: normal;
     font-size: 100%;
+    margin-bottom: 0;
 }
 
 .check-out {
@@ -218,7 +219,7 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
     box-sizing: border-box;
 }
 
-.check-out:hover {color: var(--midAltColor);}
+.check-out:hover span, .check-out:hover h3 {color: var(--midAltColor);}
 
 /***************************************************/
 /***************** BIOFEEDBACK *********************/
@@ -447,7 +448,7 @@ footer p {
 
 #social .colunas {margin-bottom: 1em;}
 
-#ctc {cursor: pointer;}
+#ctc {cursor: pointer; height: 20px;}
 
 .tooltip-text {
     visibility: hidden;
@@ -461,6 +462,9 @@ footer p {
     transition: opacity 200ms ease-in;
     padding: 7px;
 }
+
+.tooltip-hover {left: 58px;}
+.tooltip-click {right: 44px;}
 
 #ctc:hover .tooltip-hover {
     visibility: visible;
@@ -482,6 +486,7 @@ footer p {
 }
 
 .visible {visibility: visible; opacity: 1;}
+.not-visible {visibility: hidden !important;}
 
 /***************************************************/
 /***************** MEDIA QUERIE ********************/

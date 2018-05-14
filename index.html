@@ -88,21 +88,19 @@
                     </section>
 
                     <section class="work-filter repertoire">
-                    <div class="check-out">
+                    <div id="latest-creation" class="check-out">
                         <a href="FrontEnd/CorporateCompany/index.html" target="_blank"><span><i class="fas fa-briefcase fa-3x fa-fw"></i></span>
                             <h3>Latest Creation</h3></a>
                     </div>
-                    <div class="check-out">
+                    <div id="reading" class="check-out">
                         <a href="biofeedback.html"><span><i class="fab fa-readme fa-3x fa-fw"></i></span>
                             <h3>Delightful Reading</h3></a>
                     </div>
-                    <div class="check-out">
+                    <div id="everything" class="check-out">
                         <a href="work.html"><span><i class="fas fa-eye fa-3x fa-fw"></i></span>
                             <h3>See Everything</h3></a>
                     </div>
                 </section>
-
-
                 </div>
             </div>
         </div>
@@ -115,7 +113,7 @@
                 <div id="ctc" data-clipboard-text="talktome@alexgmello.com" class="colunas tooltip">
                     <p class="external-link" onclick="change()"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
                     <span class="tooltip-text tooltip-hover">click to copy</span>
-                    <!-- <span class="tooltip-text tooltip-click">email copied</span> -->
+                    <span class="tooltip-text tooltip-click">email copied</span>
                 </div>
 
                 <div class="colunas">
@@ -141,6 +139,7 @@
 <script src="js/clipboard.min.js"></script>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script>
+    //copy to clipboard
     var ctc = document.getElementById('ctc');
     var clipboard = new ClipboardJS(ctc);
     clipboard.on('success', function(e) {
@@ -150,14 +149,18 @@
         console.log(e);
     });
 
-
-
-    /*$(window).load(function() {
+    //tooltpip
+    $(window).load(function() {
         $("#ctc").click(function(){
-            $(".tooltip-text").toggleClass("visible", false);
-            $(".tooltip-click").toggleClass("visible", true);
+            $(".tooltip-hover").addClass("not-visible");
+            $(".tooltip-click").addClass("visible");
        })
-    })*/
+
+        $("#ctc").mouseleave(function() {
+            $(".tooltip-hover").removeClass("not-visible");
+            $(".tooltip-click").removeClass("visible");
+        })
+    })
 </script>
 </body>
 </html>

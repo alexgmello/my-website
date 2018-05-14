@@ -24,56 +24,6 @@
     <link rel="stylesheet" href="css/svvg-styles.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;subset=latin-ext">
-
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/speedvault.js"></script>
-
-    <script>
-        window.onbeforeunload = function(){ window.scrollTo(0,0); }
-
-        $(window).load(function(){
-            $("#FrontEnd").click(function() {
-                $("#myWorks").children().fadeOut(15);
-                $("#myWorks .web").delay(20).fadeIn(500);
-                $(".work-type").removeClass("filter-active");
-                $(this).addClass("filter-active");
-            })
-
-            $("#AudioVisual").click(function(){
-                $("#myWorks").children().fadeOut(15);
-                $("#myWorks .media").delay(20).fadeIn(500);
-                $(".work-type").removeClass("filter-active");
-                $(this).addClass("filter-active");
-            })
-
-            $("#Nothing").click(function(){
-                $("#myWorks").children().fadeOut(15);
-                $("#myWorks .nothing").delay(20).fadeIn(500);
-                $(".work-type").removeClass("filter-active");
-                $(this).addClass("filter-active");
-            })
-        })
-    </script>
-    <script>
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-                document.getElementById("topBtn").style.display = "block";
-            } else {
-                document.getElementById("topBtn").style.display = "none";
-            }
-        }
-
-        var timeOut;
-        function goTop() {
-            if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
-                window.scrollBy(0,-75);
-                timeOut=setTimeout('goTop()',10);
-            }
-            else clearTimeout(timeOut);
-        }
-    </script>
 </head>
 
 <body>
@@ -225,30 +175,7 @@
             </article>
         </div>
     </div>
-    <footer>
-        <div class="container">
-          <h4><strong class="highlight">_</strong>You can also find me in a few other places too:</h4>
-           <article id="social">
-                <div class="colunas">
-                    <p class="external-link"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
-                </div>
 
-                <div class="colunas">
-                    <a href="https://www.linkedin.com/in/alexgmello/" target="_blank" class=" external-link"><span><i class="fab fa-linkedin-in fa-lg fa-fw"></i></span> /alexgmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://twitter.com/alexgsmello" target="_blank" class=" external-link"><span><i class="fab fa-twitter fa-lg fa-fw"></i></span> /alexgsmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://www.facebook.com/alexandre.gomide.5" target="_blank" class=" external-link"><span><i class="fab fa-facebook-f fa-lg fa-fw"></i></span> /alexandre.gomide.5</a>
-                </div>
-            </article>
-
-            <p><i class="far fa-copyright"></i> 2018 <a href="https://alexgmello.com/" class="external-link">Alexandre Gomide</a> - All rights reserved</p>
-        </div>
-    </footer>
     </section>
 
     <!-- MEDIA -->
@@ -268,30 +195,7 @@
         <li class="svThumb ytVideo" data-videoID="vgYDsnDXRDc"><i class="fas fa-briefcase"></i> Football Championship (awards)</li>
         <li class="svThumb ytVideo" data-videoID="j9viftr3JMs"><i class="fas fa-briefcase"></i> Football Championship (match up)</li>
     </ul>
-    <footer>
-        <div class="container">
-          <h4><strong class="highlight">_</strong>You can also find me in a few other places too:</h4>
-           <article id="social">
-                <div class="colunas">
-                    <p class="external-link"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
-                </div>
 
-                <div class="colunas">
-                    <a href="https://www.linkedin.com/in/alexgmello/" target="_blank" class=" external-link"><span><i class="fab fa-linkedin-in fa-lg fa-fw"></i></span> /alexgmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://twitter.com/alexgsmello" target="_blank" class=" external-link"><span><i class="fab fa-twitter fa-lg fa-fw"></i></span> /alexgsmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://www.facebook.com/alexandre.gomide.5" target="_blank" class=" external-link"><span><i class="fab fa-facebook-f fa-lg fa-fw"></i></span> /alexandre.gomide.5</a>
-                </div>
-            </article>
-
-            <p><i class="far fa-copyright"></i> 2018 <a href="https://alexgmello.com/" class="external-link">Alexandre Gomide</a> - All rights reserved</p>
-        </div>
-    </footer>
     </section>
 
     <!-- NOTHING -->
@@ -304,13 +208,20 @@
             <img src="https://source.unsplash.com/960x540/?cat" alt="a picture of a kitty cat">
         </article>
         </div>
-
-        <footer>
-            <div class="container">
+    </section>
+    </div>
+    <footer>
+        <div class="container">
           <h4><strong class="highlight">_</strong>You can also find me in a few other places too:</h4>
            <article id="social">
+                <div id="ctc" data-clipboard-text="talktome@alexgmello.com" class="colunas tooltip">
+                    <p class="external-link" onclick="change()"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
+                    <span class="tooltip-text tooltip-hover">click to copy</span>
+                    <span class="tooltip-text tooltip-click">email copied :)</span>
+                </div>
+
                 <div class="colunas">
-                    <p class="external-link"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
+                    <a href="https://github.com/alexgmello" target="_blank" class="external-link"><span><i class="fab fa-github fa-lg fa-fw"></i></span> /alexgmello</a>
                 </div>
 
                 <div class="colunas">
@@ -329,7 +240,78 @@
             <p><i class="far fa-copyright"></i> 2018 <a href="https://alexgmello.com/" class="external-link">Alexandre Gomide</a> - All rights reserved</p>
         </div>
         </footer>
-    </section>
-    </div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/speedvault.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script>
+    //copy to clipboard
+    var ctc = document.getElementById('ctc');
+    var clipboard = new ClipboardJS(ctc);
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
+    //tooltpip
+    $(window).load(function() {
+        $("#ctc").click(function(){
+            $(".tooltip-hover").addClass("not-visible");
+            $(".tooltip-click").addClass("visible");
+       })
+
+        $("#ctc").mouseleave(function() {
+            $(".tooltip-hover").removeClass("not-visible");
+            $(".tooltip-click").removeClass("visible");
+        })
+    })
+</script>
+<script>
+    window.onbeforeunload = function(){ window.scrollTo(0,0); }
+
+    $(window).load(function(){
+        $("#FrontEnd").click(function() {
+            $("#myWorks").children().fadeOut(15);
+            $("#myWorks .web").delay(20).fadeIn(500);
+            $(".work-type").removeClass("filter-active");
+            $(this).addClass("filter-active");
+        })
+
+        $("#AudioVisual").click(function(){
+            $("#myWorks").children().fadeOut(15);
+            $("#myWorks .media").delay(20).fadeIn(500);
+            $(".work-type").removeClass("filter-active");
+            $(this).addClass("filter-active");
+        })
+
+        $("#Nothing").click(function(){
+            $("#myWorks").children().fadeOut(15);
+            $("#myWorks .nothing").delay(20).fadeIn(500);
+            $(".work-type").removeClass("filter-active");
+            $(this).addClass("filter-active");
+        })
+    })
+</script>
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+            document.getElementById("topBtn").style.display = "block";
+        } else {
+            document.getElementById("topBtn").style.display = "none";
+        }
+    }
+
+    var timeOut;
+    function goTop() {
+        if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+            window.scrollBy(0,-75);
+            timeOut=setTimeout('goTop()',10);
+        }
+        else clearTimeout(timeOut);
+    }
+</script>
 </body>
 </html>

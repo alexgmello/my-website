@@ -13,12 +13,6 @@ body {
     font-family: 'Quicksand', sans-serif;
     background: var(--darkColor);
     box-sizing: border-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-direction: column;
 }
 
 a {
@@ -38,11 +32,10 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
 }
 
 .container {
-    display: -webkit-box;
-    display: -moz-box;
     display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
@@ -50,7 +43,6 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-height: 100%;
 }
 
 .ativo  {
@@ -82,12 +74,14 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
     cursor: pointer;
 }
 
+#topo, #painel-top, #painel-mid, #painel-bot {margin-bottom: 30px;}
+
 /***************** CONTEÚDO ********************/
 
-#sobre, #biofeedback, #work {
+/* #sobre, #biofeedback, #work {
     width: 100%;
     margin: 20px auto;
-}
+} */
 
 /***************** HEADER ********************/
 
@@ -96,13 +90,6 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
     height: 60px;
     border-top: 3px solid var(--lightColor);
     width: 100%;
-}
-
-#topo-mob {
-    display: none;
-    background-color: var(--midColor);
-    height: 50px;
-    border-top: 3px solid var(--lightColor);
 }
 
 #menu {
@@ -127,33 +114,25 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
 /***************** SOBRE ********************/
 /********************************************/
 
-.conteudo {height: auto;}
-
 #painel-top {
-    text-align: center;
-    padding-left: 122px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #painel-top img {
-    width: 150px;
-    height: auto;
-    margin: 0;
-    border-radius: 0px 30px 0px 30px;
-    -moz-border-radius: 0px 30px 0px 30px;
-    -webkit-border-radius: 0px 30px 0px 30px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     border: 3px solid var(--lightColor);
-    float: left;
-}
-
-#main {
-    height: 150px;
-    float: right;
-    text-align: right;
+    margin-bottom: 20px;
 }
 
 #painel-top h1, #painel-top h2 {
-    margin: 0;
     font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 7px;
 }
 
 #painel-top h1 {font-size: 24px;}
@@ -163,41 +142,33 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
 /*****/
 
 #painel-mid {
-    clear: both;
-    text-align: right;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
 }
 
 #infos {
-    float: left;
-    width: 400px;
-}
-
-#infos p {
-    padding: 14px 7px 14px 0;
-    margin: 0;
     text-align: justify;
+    max-width: 40%;
+    flex-shrink: 10;
 }
 
-#infos p:last-child {margin-bottom: 30px;}
-
-#detalhes {float: right;}
-
-#detalhes p {
-    margin: 0;
-    margin-bottom: 3px;
+#detalhes {
+    text-align: right;
+    max-width: 60%;
 }
 
-#detalhes p:first-child {padding: 14px 0 0 7px;}
+#detalhes p, #detalhes-mob p, #detalhes-mob h3 {
+    margin-top: 0;
+    margin-bottom: 7px;
+}
 
 /******* SKILLS *******/
 
-.js {display: none;}
-
-#painel-bot {
-    clear: both;
-    margin-bottom: 20px;
-    text-align: left;
-}
+#painel-bot {text-align: left;}
 
 .repertoire {
     text-align: center;
@@ -208,16 +179,16 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
     font-weight: normal;
     font-size: 100%;
     margin-bottom: 0;
+    margin-top: 25px;
 }
 
 .check-out {
-    padding: 20px 0;
-    color: #f4f4f4;
     font-size: 30px;
-    transition: color 0.5s ease;
     cursor: pointer;
     box-sizing: border-box;
 }
+
+.check-out span, .check-out h3 {transition: color 0.5s ease-in-out;}
 
 .check-out:hover span, .check-out:hover h3 {color: var(--midAltColor);}
 
@@ -264,12 +235,12 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
     align-items: center;
 }
 
-.gif img {
-    margin: auto;
-    width: auto;
+.artigo-fim::before,
+.artigo-fim::after {
+    content: url(../img/biofeedback/bat.gif);
+    display: inline-block;
+    padding: 0 7px;
 }
-
-.gif {width: auto !important;}
 
 /***************************************************/
 /********************** WORK ***********************/
@@ -492,71 +463,23 @@ footer p {
 /***************** MEDIA QUERIE ********************/
 /***************************************************/
 
-@media screen and (max-width:965px){
-    #painel-top {
-        padding-left: 0;
-        display: inline-block;
-    }
+@media screen and (max-width: 899px) {
+    #painel-mid {flex-direction: column;}
 
-    #painel-top img {
-        width: 100px;
-        height: auto;
-        border-radius: 0px 25px 0px 25px;
-        -moz-border-radius: 0px 25px 0px 25px;
-        -webkit-border-radius: 0px 25px 0px 25px;
-    }
-
-    #main {
-        float: left;
-        height: 100px;
-        padding-top: 25px;
-        padding-left: 25px;
-    }
-
-    #infos {width: auto;}
-
-    #infos p:first-child {padding-top: 0px;}
-
-    #infos p:last-child {
-        margin-bottom: 24px;
-        padding-bottom: 0;
+    #infos {
+        flex-shrink: 1;
+        max-width: 100%;
     }
 
     #detalhes {display: none;}
-
-    #painel-mid {text-align: center;}
-
-    #detalhes-mob {
-        clear: both;
-        display: block;
-        margin-bottom: 24px;
-    }
-
-    #detalhes-mob p, #detalhes-mob h3 {
-        margin: 0;
-        margin-bottom: 3px;
-        text-align: center;
-    }
-
-    #detalhes-mob p:first-child {padding: 14px 0 0 7px;}
-}
-
-@media screen and (max-width:852px){
-    #topo {position: static;}
-}
-
-@media screen and (max-width: 824px) {
-    .fixed-bottom {position: static;}
-}
-
-@media screen and (max-width: 806px) {
-    #skills h1 {font-size: 16px;}
+    #detalhes-mob {display: block;}
 }
 
 @media screen and (max-width:768px){
     .work-web img {width: 100%;}
     .artigo {width: 98%;}
     .artigo img {width: 100%;}
+    .artigo .gif {width: auto;}
 }
 
 @media screen and (max-width:736px){
@@ -565,38 +488,6 @@ footer p {
 
 @media screen and (max-width: 680px) {
     .work-type {font-size: 18px;}
-}
-
-@media screen and (max-width:667px){
-    #painel-top img {
-        width: 90px;
-        height: auto;
-        border-radius: 0px 25px 0px 25px;
-        -moz-border-radius: 0px 25px 0px 25px;
-        -webkit-border-radius: 0px 25px 0px 25px;
-    }
-
-    #main {
-        padding-top: 12px;
-        padding-left: 10px;
-    }
-
-    #painel-top h1 {
-        font-size: 20px;
-        margin-bottom: 3px;
-    }
-
-    #painel-top h3 {font-size: 14px;}
-
-    #detalhes-mob h3 {margin-top: 7px;}
-
-    #detalhes-mob h3:first-child {margin-top: 0;}
-}
-
-@media screen and (max-width:637px){
-    .ativo {padding-bottom: 7px;}
-
-    #topo {height: 50px;}
 }
 
 @media screen and (max-width:571px) {
@@ -611,45 +502,8 @@ footer p {
     .repertoire {flex-direction: column;}
 }
 
-@media screen and (max-width:440px){
-    #main {
-        width: 224px;
-        padding-top: 12px;
-        float: right;
-    }
-
-    .javascript {display: none;}
-
-    .js {
-        display: flex;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-    }
-}
-
 @media screen and (max-width:414px){
-    #painel-top {padding-left: 0;}
-
-    #painel-top img {
-        width: 90px;
-        height: auto;
-        border-radius: 0px 25px 0px 25px;
-        -moz-border-radius: 0px 25px 0px 25px;
-        -webkit-border-radius: 0px 25px 0px 25px;
-    }
-
-    #painel-top h1 {
-        font-size: 20px;
-        margin-bottom: 3px;
-    }
-
-    #painel-top h3 {font-size: 14px;}
-
-    #detalhes-mob h3 {margin-top: 7px;}
-
-    #detalhes-mob h3:first-child {margin-top: 0;}
+    #painel-top h1 {font-size: 20px;}
 
     .repertoire {flex-wrap: wrap;}
     .repertoire .work-type {
@@ -660,10 +514,6 @@ footer p {
     #social {flex-direction: column;}
 
     .work-web p {text-align: justify;}
-}
-
-@media screen and (max-width:320px){
-    #main {width: 198px;}
 }
 
 /************ SV LIST ************/
@@ -693,5 +543,3 @@ footer p {
         border-bottom-right-radius: 0;
     }
 }
-
-/*********************************/

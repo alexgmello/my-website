@@ -23,26 +23,6 @@
     <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;subset=latin-ext">
-    <script>
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-                document.getElementById("topBtn").style.display = "block";
-            } else {
-                document.getElementById("topBtn").style.display = "none";
-            }
-        }
-
-        var timeOut;
-        function goTop() {
-            if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
-                window.scrollBy(0,-75);
-                timeOut=setTimeout('goTop()',10);
-            }
-            else clearTimeout(timeOut);
-        }
-    </script>
 </head>
 
 <body>
@@ -90,7 +70,7 @@
                     <p><strong>REYNOLDS, E..</strong> Quit Playing Games with My Heart: Biofeedback in Gaming. <i>Available at: <a href="http://www.gamasutra.com/blogs/ErinReynolds/20131029/203265/Quit_Playing_Games_with_My_Heart_Biofeedback_in_Gaming.php" target="_blank" class="external-link">gamasutra.com</a></i>, Last acess: September, 2015.</p>
                     </article>
 
-                    <h2 class="artigo-fim highlight"><span class="gif"><img src="img/biofeedback/bat.gif" alt="flying bat monster thingy"></span> That's all folks <span class="gif"><img src="img/biofeedback/bat.gif" alt="flying bat monster thingy"></span></h2>
+                    <h2 class="artigo-fim highlight">That's all folks</h2>
                 </article>
             </section>
         </div>
@@ -100,8 +80,14 @@
         <div class="container">
           <h4><strong class="highlight">_</strong>You can also find me in a few other places too:</h4>
            <article id="social">
+                <div id="ctc" data-clipboard-text="talktome@alexgmello.com" class="colunas tooltip">
+                    <p class="external-link" onclick="change()"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
+                    <span class="tooltip-text tooltip-hover">click to copy</span>
+                    <span class="tooltip-text tooltip-click">email copied :)</span>
+                </div>
+
                 <div class="colunas">
-                    <p class="external-link"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
+                    <a href="https://github.com/alexgmello" target="_blank" class="external-link"><span><i class="fab fa-github fa-lg fa-fw"></i></span> /alexgmello</a>
                 </div>
 
                 <div class="colunas">
@@ -121,6 +107,51 @@
         </div>
     </footer>
 <script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script>
+    //copy to clipboard
+    var ctc = document.getElementById('ctc');
+    var clipboard = new ClipboardJS(ctc);
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
+    //tooltpip
+    $(window).load(function() {
+        $("#ctc").click(function(){
+            $(".tooltip-hover").addClass("not-visible");
+            $(".tooltip-click").addClass("visible");
+       })
+
+        $("#ctc").mouseleave(function() {
+            $(".tooltip-hover").removeClass("not-visible");
+            $(".tooltip-click").removeClass("visible");
+        })
+    })
+</script>
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            document.getElementById("topBtn").style.display = "block";
+        } else {
+            document.getElementById("topBtn").style.display = "none";
+        }
+    }
+
+    var timeOut;
+    function goTop() {
+        if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+            window.scrollBy(0,-75);
+            timeOut=setTimeout('goTop()',10);
+        }
+        else clearTimeout(timeOut);
+    }
+</script>
 </body>
 
 </html>

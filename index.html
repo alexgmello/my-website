@@ -140,12 +140,6 @@
     //copy to clipboard
     var ctc = document.getElementById('ctc');
     var clipboard = new ClipboardJS(ctc);
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
 
     //tooltpip
     $(window).load(function() {

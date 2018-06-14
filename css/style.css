@@ -53,6 +53,12 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
 .highlight {color: var(--midAltColor);}
 .external-link {color: var(--lightAltColor);}
 
+.round {
+    border: 2px solid var(--lightAltColor);
+    border-radius: 50%;
+    padding: 6px;
+}
+
 #detalhes-mob {display: none;}
 
 #topBtn {
@@ -75,13 +81,6 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
 }
 
 #topo, #painel-top, #painel-mid, #painel-bot {margin-bottom: 30px;}
-
-/***************** CONTEÚDO ********************/
-
-/* #sobre, #biofeedback, #work {
-    width: 100%;
-    margin: 20px auto;
-} */
 
 /***************** HEADER ********************/
 
@@ -173,17 +172,17 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
 .repertoire {
     text-align: center;
     justify-content: space-between !important;
+    margin-top: 2rem;
 }
 
 .repertoire h3 {
     font-weight: normal;
-    font-size: 100%;
     margin-bottom: 0;
     margin-top: 25px;
 }
 
 .check-out {
-    font-size: 30px;
+    font-size: 26px;
     cursor: pointer;
     box-sizing: border-box;
 }
@@ -291,8 +290,8 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
     box-sizing: border-box;
 }
 
-.filter-active {color: var(--lightAltColor);}
-.work-type:hover {color: var(--midAltColor);}
+.filter-active {color: var(--midAltColor);}
+.work-type:hover {color: var(--lightColor);}
 
 .work-type h1 {
     margin-bottom: 0;
@@ -420,14 +419,17 @@ footer p {
 
 #social .colunas {margin-bottom: 1em;}
 
-#ctc {cursor: pointer; height: 20px;}
+#ctc {
+    cursor: pointer;
+    height: 32px;
+}
 
 .tooltip-text {
     visibility: hidden;
     position: relative;
     background: #00ff8b;
     border-radius: .4em;
-    top: -3.5rem;
+    top: -4rem;
     font-size: 90%;
     color: var(--midColor);
     opacity: 0;

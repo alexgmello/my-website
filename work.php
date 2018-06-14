@@ -27,17 +27,8 @@
 </head>
 
 <body>
-    <header>
-        <div id="topo">
-            <div class="container-menu">
-                <nav id="menu">
-                    <a href="index.html" id="sobre-nav">About</a>
-                    <a href="biofeedback.html" id="biofeedback-nav">Biofeedback</a>
-                    <a href="work.html" id="work-nav" class="ativo">Work</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <!-- HEADER -->
+    <?php include_once "header.php" ?>
 
     <div class="container">
         <button onclick="goTop()" id="topBtn" title="Back to top"><span><i class="fas fa-arrow-circle-up"></i></span></button>
@@ -175,7 +166,8 @@
             </article>
         </div>
     </div>
-
+    <!-- FOOTER -->
+    <?php include_once "footer.php" ?>
     </section>
 
     <!-- MEDIA -->
@@ -195,7 +187,8 @@
         <li class="svThumb ytVideo" data-videoID="vgYDsnDXRDc"><i class="fas fa-briefcase"></i> Football Championship (awards)</li>
         <li class="svThumb ytVideo" data-videoID="j9viftr3JMs"><i class="fas fa-briefcase"></i> Football Championship (match up)</li>
     </ul>
-
+    <!-- FOOTER -->
+    <?php include_once "footer.php" ?>
     </section>
 
     <!-- NOTHING -->
@@ -204,69 +197,18 @@
         <article>
             <h3 class="highlight">Here it is... NOTHING!</h3>
             <p>I told you that you would find only nothing here, didn't I? But you came anyway. Now I feel kinda bad...</p>
-            <p>So here's a random cat picture for you. Cortesy of <strong><a href="https://source.unsplash.com/" target="_blank" class="highlight">Unsplash</a></strong>.</p>
+            <p>So here's a random cat picture for you. Cortesy of <strong><a href="https://source.unsplash.com/" target="_blank" rel="nofollow" class="highlight">Unsplash</a></strong>.</p>
             <img src="https://source.unsplash.com/960x540/?cat" alt="a picture of a kitty cat">
         </article>
         </div>
+    <!-- FOOTER -->
+    <?php include_once "footer.php" ?>
     </section>
+
     </div>
-    <footer>
-        <div class="container">
-          <h4><strong class="highlight">_</strong>You can also find me in a few other places too:</h4>
-           <article id="social">
-                <div id="ctc" data-clipboard-text="talktome@alexgmello.com" class="colunas tooltip">
-                    <p class="external-link" onclick="change()"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
-                    <span class="tooltip-text tooltip-hover">click to copy</span>
-                    <span class="tooltip-text tooltip-click">email copied :)</span>
-                </div>
 
-                <div class="colunas">
-                    <a href="https://github.com/alexgmello" target="_blank" class="external-link"><span><i class="fab fa-github fa-lg fa-fw"></i></span> /alexgmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://www.linkedin.com/in/alexgmello/" target="_blank" class=" external-link"><span><i class="fab fa-linkedin-in fa-lg fa-fw"></i></span> /alexgmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://twitter.com/alexgsmello" target="_blank" class=" external-link"><span><i class="fab fa-twitter fa-lg fa-fw"></i></span> /alexgsmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://www.facebook.com/alexandre.gomide.5" target="_blank" class=" external-link"><span><i class="fab fa-facebook-f fa-lg fa-fw"></i></span> /alexandre.gomide.5</a>
-                </div>
-            </article>
-
-            <p><i class="far fa-copyright"></i> 2018 <a href="https://alexgmello.com/" class="external-link">Alexandre Gomide</a> - All rights reserved</p>
-        </div>
-        </footer>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/speedvault.js"></script>
-<script src="js/clipboard.min.js"></script>
-<script>
-    //copy to clipboard
-    var ctc = document.getElementById('ctc');
-    var clipboard = new ClipboardJS(ctc);
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-
-    //tooltpip
-    $(window).load(function() {
-        $("#ctc").click(function(){
-            $(".tooltip-hover").addClass("not-visible");
-            $(".tooltip-click").addClass("visible");
-       })
-
-        $("#ctc").mouseleave(function() {
-            $(".tooltip-hover").removeClass("not-visible");
-            $(".tooltip-click").removeClass("visible");
-        })
-    })
-</script>
 <script>
     window.onbeforeunload = function(){ window.scrollTo(0,0); }
 

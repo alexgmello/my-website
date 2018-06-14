@@ -25,17 +25,8 @@
 </head>
 
 <body>
-    <header>
-        <div id="topo">
-            <div class="container-menu">
-                <nav id="menu">
-                    <a href="index.html" id="sobre-nav" class="ativo">About</a>
-                    <a href="biofeedback.html" id="biofeedback-nav">Biofeedback</a>
-                    <a href="work.html" id="work-nav">Work</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <!-- HEADER -->
+    <?php include_once "header.php" ?>
 
     <div class="container">
         <div class="conteudo">
@@ -88,15 +79,15 @@
 
                 <section class="work-filter repertoire">
                 <div id="latest-creation" class="check-out">
-                    <a href="FrontEnd/CorporateCompany/index.html" target="_blank"><span><i class="fas fa-briefcase fa-3x fa-fw"></i></span>
+                    <a href="FrontEnd/CorporateCompany/index.html" target="_blank"><span><i class="fas fa-briefcase fa-lg fa-fw"></i></span>
                         <h3>Latest Creation</h3></a>
                 </div>
                 <div id="reading" class="check-out">
-                    <a href="biofeedback.html"><span><i class="fab fa-readme fa-3x fa-fw"></i></span>
+                    <a href="biofeedback.php"><span><i class="fas fa-book fa-lg fa-fw"></i></span>
                         <h3>Delightful Reading</h3></a>
                 </div>
                 <div id="everything" class="check-out">
-                    <a href="work.html"><span><i class="fas fa-eye fa-3x fa-fw"></i></span>
+                    <a href="work.php"><span><i class="fas fa-eye fa-lg fa-fw"></i></span>
                         <h3>See Everything</h3></a>
                 </div>
             </section>
@@ -104,36 +95,7 @@
         </div>
     </div>
     <!-- FOOTER -->
-    <footer>
-        <div class="container">
-          <h4><strong class="highlight">_</strong>You can also find me in a few other places too:</h4>
-           <article id="social">
-                <div id="ctc" data-clipboard-text="talktome@alexgmello.com" class="colunas tooltip">
-                    <p class="external-link" onclick="change()"><span><i class="fas fa-envelope fa-lg fa-fw"></i></span> talktome@alexgmello</p>
-                    <span class="tooltip-text tooltip-hover">click to copy</span>
-                    <span class="tooltip-text tooltip-click">email copied :)</span>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://github.com/alexgmello" target="_blank" class="external-link"><span><i class="fab fa-github fa-lg fa-fw"></i></span> /alexgmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://www.linkedin.com/in/alexgmello/" target="_blank" class="external-link"><span><i class="fab fa-linkedin-in fa-lg fa-fw"></i></span> /alexgmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://twitter.com/alexgsmello" target="_blank" class="external-link"><span><i class="fab fa-twitter fa-lg fa-fw"></i></span> /alexgsmello</a>
-                </div>
-
-                <div class="colunas">
-                    <a href="https://www.facebook.com/alexandre.gomide.5" target="_blank" class="external-link"><span><i class="fab fa-facebook-f fa-lg fa-fw"></i></span> /alexandre.gomide.5</a>
-                </div>
-            </article>
-
-            <p><i class="far fa-copyright"></i> 2018 <a href="https://alexgmello.com/" class="external-link">Alexandre Gomide</a> - All rights reserved</p>
-        </div>
-    </footer>
+    <?php include_once "footer.php" ?>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/clipboard.min.js"></script>
 <script>

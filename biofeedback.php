@@ -21,8 +21,8 @@
     <link rel="canonical" href="https://alexgmello.com/biofeedback">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;subset=latin-ext">
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>

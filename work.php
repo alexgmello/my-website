@@ -21,9 +21,9 @@
     <link rel="canonical" href="https://alexgmello.com/work">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/svvg-styles.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;subset=latin-ext">
+    <link rel="stylesheet" href="css/svvg.min.css">
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -167,7 +167,7 @@
         </div>
     </div>
     <!-- FOOTER -->
-    <?php include_once "footer.php" ?>
+    <?php include "footer.php" ?>
     </section>
 
     <!-- MEDIA -->
@@ -188,7 +188,7 @@
         <li class="svThumb ytVideo" data-videoID="j9viftr3JMs"><i class="fas fa-briefcase"></i> Football Championship (match up)</li>
     </ul>
     <!-- FOOTER -->
-    <?php include_once "footer.php" ?>
+    <?php include "footer.php" ?>
     </section>
 
     <!-- NOTHING -->
@@ -202,7 +202,7 @@
         </article>
         </div>
     <!-- FOOTER -->
-    <?php include_once "footer.php" ?>
+    <?php include "footer.php" ?>
     </section>
 
     </div>

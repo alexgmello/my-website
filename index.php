@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hi, I'm a Interaction Designer - Welcome to my site. Enjoy!</title>
-    <meta name="description" content="This is my personal website and portfolio. I'm a digital designer, my line of work consists mainly of user experience, web design and mobile related projects.">
+    <meta name="description" content="This is my personal website and portfolio. I'm a digital designer, my line of work consists mainly of video production, user experience, web and mobile related projects.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Alexandre Gomide da Silva Mello">
 

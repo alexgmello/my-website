@@ -173,19 +173,20 @@
     <!-- MEDIA -->
     <section class="media">
     <ul id="svList">
-        <li class="svThumb ytVideo" data-videoID="n8iirRcNKAk"><i class="fas fa-graduation-cap"></i> Um dia descontínuo</li>
-        <li class="svThumb ytVideo" data-videoID="Z78uw3me8II"><i class="fas fa-graduation-cap"></i> Bike Adiante</li>
-        <li class="svThumb ytVideo" data-videoID="uWwZxoTP6hQ"><i class="fas fa-graduation-cap"></i> GambiTech</li>
-        <li class="svThumb ytVideo" data-videoID="Sa7bc6CMEkw"><i class="fas fa-graduation-cap"></i> Blah!</li>
-        <li class="svThumb ytVideo" data-videoID="smo0h0rUeTE"><i class="fas fa-graduation-cap"></i> Saga (sonorization)</li>
+        <li class="svThumb ytVideo" data-videoID="je_eVI1s5rc"><i class="fas fa-briefcase"></i> C.E.B.A.S.</li>
+        <li class="svThumb ytVideo" data-videoID="O91moIwSS-4"><i class="fas fa-briefcase"></i> Football Championship (intro)</li>
+        <li class="svThumb ytVideo" data-videoID="vgYDsnDXRDc"><i class="fas fa-briefcase"></i> Football Championship (awards)</li>
+        <li class="svThumb ytVideo" data-videoID="AQOH3AmoY2w"><i class="fas fa-briefcase"></i> Football Championship (line up)</li>
+        <li class="svThumb ytVideo" data-videoID="KjG0p2JXuNA"><i class="fas fa-briefcase"></i> Football Championship (gallery)</li>
+        <li class="svThumb ytVideo" data-videoID="_Yv57vQXnXY"><i class="fas fa-briefcase"></i> Football Championship (jumbotron)</li>
+        <li class="svThumb ytVideo" data-videoID="j9viftr3JMs"><i class="fas fa-briefcase"></i> Football Championship (match up)</li>
         <li class="svThumb ytVideo" data-videoID="qUc7S5BjfKI"><i class="fas fa-graduation-cap"></i> Mochila Inteligente (simulation)</li>
         <li class="svThumb ytVideo" data-videoID="zKbmJ9qKJr4"><i class="fas fa-graduation-cap"></i> Mochila Inteligente (explanation)</li>
-        <li class="svThumb ytVideo" data-videoID="KjG0p2JXuNA"><i class="fas fa-briefcase"></i> Football Championship (gallery)</li>
-        <li class="svThumb ytVideo" data-videoID="O91moIwSS-4"><i class="fas fa-briefcase"></i> Football Championship (intro)</li>
-        <li class="svThumb ytVideo" data-videoID="AQOH3AmoY2w"><i class="fas fa-briefcase"></i> Football Championship (line up)</li>
-        <li class="svThumb ytVideo" data-videoID="_Yv57vQXnXY"><i class="fas fa-briefcase"></i> Football Championship (jumbotron)</li>
-        <li class="svThumb ytVideo" data-videoID="vgYDsnDXRDc"><i class="fas fa-briefcase"></i> Football Championship (awards)</li>
-        <li class="svThumb ytVideo" data-videoID="j9viftr3JMs"><i class="fas fa-briefcase"></i> Football Championship (match up)</li>
+        <li class="svThumb ytVideo" data-videoID="Z78uw3me8II"><i class="fas fa-graduation-cap"></i> Bike Adiante</li>
+        <li class="svThumb ytVideo" data-videoID="uWwZxoTP6hQ"><i class="fas fa-graduation-cap"></i> GambiTech</li>
+        <li class="svThumb ytVideo" data-videoID="smo0h0rUeTE"><i class="fas fa-graduation-cap"></i> Saga (sonorization)</li>
+        <li class="svThumb ytVideo" data-videoID="Sa7bc6CMEkw"><i class="fas fa-graduation-cap"></i> Blah!</li>
+        <li class="svThumb ytVideo" data-videoID="n8iirRcNKAk"><i class="fas fa-graduation-cap"></i> Um Dia Descontínuo</li>
     </ul>
     <!-- FOOTER -->
     <?php include "footer.php" ?>

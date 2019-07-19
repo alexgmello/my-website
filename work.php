@@ -39,11 +39,11 @@
                 </section>
 
                 <section class="work-filter">
-                    <div id="FrontEnd" class="work-type filter-active">
+                    <div id="FrontEnd" class="work-type">
                         <span><i class="fas fa-desktop fa-5x"></i></span>
                         <h1>Web Design</h1>
                     </div>
-                    <div id="AudioVisual" class="work-type">
+                    <div id="AudioVisual" class="work-type filter-active">
                         <span><i class="fas fa-play-circle fa-5x"></i></span>
                         <h1>Audio Visual</h1>
                     </div>

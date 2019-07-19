@@ -260,7 +260,7 @@ p, h1, h2, h3, h4 {color: #f4f4f4;}
 
 #svList:last-child {margin-bottom: 30px;}
 
-.media, .nothing {display: none;}
+.web, .nothing {display: none;}
 
 .nothing img {
     margin-bottom: 25px;

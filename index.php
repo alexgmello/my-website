@@ -34,22 +34,23 @@
                 <img src="img/sobre/profile-pic-web.jpg" alt="my profile photo">
                 <article id="main">
                     <h1>My name is <strong>Alexandre Gomide</strong></h1>
-                    <h2>and I'm an <span class="highlight">Interaction Designer</span></h2>
+                    <h2>and I'm a <span class="highlight">Digital Designer</span></h2>
                 </article>
             </div>
 
             <div id="painel-mid">
                 <div id="infos">
-                    <p><strong class="highlight">_</strong>Hi there, nice to see you here. As I said before, I'm Alexandre and I work as a <strong class="highlight">Interaction Designer</strong>. I've graduated from Pontifícia Universidade Católica do Rio de Janeiro. People mostly known it as <strong class="highlight">PUC-Rio</strong>.</p>
-                    <p><strong class="highlight">_</strong>If you're in need of someone to help you <strong class="highlight">create your website</strong>, or maybe you already have one but want your customers to have a <strong class="highlight">better experience</strong> while using your applications. Perhaps you are planning to make your site <strong class="highlight">mobile friendly</strong> so it can keep up to date and reach a greater amount of views? Let's get in touch with each other, after all we've got nothing to lose, am I right?</p>
+                    <p><strong class="highlight">_</strong>Hi there, nice to see you here. As I said before, I'm Alexandre and I work as a Digital Designer, in my case this means that I'm a <strong class="highlight">Video Editor</strong> and a <strong class="highlight">Motion Designer</strong> (also, a soon to be <strong class="highlight">Visual Effects Artist</strong>).</p>
+                    <p><strong class="highlight">_</strong>Right now I'm at a transitional period, I'm on my way to move to <strong class="highlight">London (Ontario, CA)</strong> and begin path to become a VFX artist.</p>
                 </div>
                 <div id="detalhes">
                     <p><strong class="highlight">_</strong>Bachelor of Design (PUC-Rio/2016) <strong class="highlight">:Education</strong></p>
-                    <p><strong class="highlight">_</strong>CCEAD PUC-Rio (Jul/2017 - Present)<strong class="highlight"> :Work</strong></p>
-                    <p><strong class="highlight">_</strong>SESC - Departamento Nacional (Mar/2015 - Sep/2015) <strong class="highlight">:Experiences</strong></p>
+                    <p><strong class="highlight">_</strong>CCEAD PUC-Rio (Jul/2017 - Jul/2019)<strong class="highlight"> :Work</strong></p>
+                    <p><strong class="highlight">_</strong>SESC - Departamento Nacional (Mar/2015 - Sep/2015)</p>
                     <p><strong class="highlight">_</strong>Rio de Janeiro - Brazil <strong class="highlight">:Location</strong></p>
                     <p><strong class="highlight">_</strong>Portuguese (born and raised) <strong class="highlight">:Languages</strong></p>
                     <p><strong class="highlight">_</strong>English (solid as a rock)</p>
+                    <p><strong class="highlight">_</strong>French (débutant)</p>
                     <p><strong class="highlight">_</strong>CCAA Best Student (1997) <strong class="highlight">:Awards</strong></p>
                     <p><strong class="highlight">_</strong>University Of Cambridge - ESOL Examinations, Pass with Merit (2007)</p>
                 </div>
@@ -57,14 +58,14 @@
                     <h3><strong class="highlight">_Education</strong></h3>
                     <p>Bachelor of Design (PUC-Rio/2016)</p>
                     <h3><strong class="highlight">_Work</strong></h3>
-                    <p>CCEAD PUC-Rio (Jul/2017 - Present)</p>
-                    <h3><strong class="highlight">_Experiences</strong></h3>
+                    <p>CCEAD PUC-Rio (Jul/2017 - Jul/2019)</p>
                     <p>SESC - Departamento Nacional (Mar/2015 - Sep/2015)</p>
                     <h3><strong class="highlight">_Location</strong></h3>
                     <p>Rio de Janeiro - Brazil</p>
                     <h3><strong class="highlight">_Languages</strong></h3>
                     <p>Portuguese (born and raised)</p>
                     <p>English (solid as a rock)</p>
+                    <p><strong class="highlight">_</strong>French (débutant)</p>
                     <h3><strong class="highlight">_Awards</strong></h3>
                     <p>CCAA Best Student (1997)</p>
                     <p>University Of Cambridge - ESOL Examinations, Pass with Merit (2007)</p>
@@ -79,7 +80,7 @@
 
                 <section class="work-filter repertoire">
                 <div id="latest-creation" class="check-out">
-                    <a href="FrontEnd/CorporateCompany/index.html" target="_blank"><span><i class="fas fa-briefcase fa-lg fa-fw"></i></span>
+                    <a href="https://youtu.be/je_eVI1s5rc" target="_blank"><span><i class="fas fa-briefcase fa-lg fa-fw"></i></span>
                         <h3>Latest Creation</h3></a>
                 </div>
                 <div id="reading" class="check-out">

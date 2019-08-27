@@ -41,7 +41,7 @@
             <div id="painel-mid">
                 <div id="infos">
                     <p><strong class="highlight">_</strong>Hi there, nice to see you here. As I said before, I'm Alexandre and I work as a Digital Designer, in my case this means that I'm a <strong class="highlight">Video Editor</strong> and a <strong class="highlight">Motion Designer</strong> (also, a soon to be <strong class="highlight">Visual Effects Artist</strong>).</p>
-                    <p><strong class="highlight">_</strong>Right now I'm at a transitional period, I'm on my way to move to <strong class="highlight">London (Ontario, CA)</strong> and begin path to become a VFX artist.</p>
+                    <p><strong class="highlight">_</strong>Currently living in <strong class="highlight">London (Ontario, CA)</strong> where I'm going to attend to Fanshawe College and begin my path in order to become a VFX artist.</p>
                 </div>
                 <div id="detalhes">
                     <p><strong class="highlight">_</strong>Bachelor of Design (PUC-Rio/2016) <strong class="highlight">:Education</strong></p>

@@ -45,7 +45,7 @@
                     </div>
                     <div id="AudioVisual" class="work-type filter-active">
                         <span><i class="fas fa-play-circle fa-5x"></i></span>
-                        <h1>Audio Visual</h1>
+                        <h1>VFX & Motion</h1>
                     </div>
                     <div id="Nothing" class="work-type">
                         <span><i class="far fa-square fa-5x"></i></span>
@@ -173,15 +173,15 @@
     <!-- MEDIA -->
     <section class="media">
     <ul id="svList">
+        <li class="svThumb ytVideo" data-videoID="nh-UBLJG-UE"><i class="fas fa-graduation-cap"></i> VFX Short</li>
+        <li class="svThumb ytVideo" data-videoID="mIZYGGJLPQM"><i class="fas fa-graduation-cap"></i> CGI Comps</li>
+        <li class="svThumb ytVideo" data-videoID="nUJehucopnM"><i class="fas fa-graduation-cap"></i> Camera Tracking Comps</li>
         <li class="svThumb ytVideo" data-videoID="je_eVI1s5rc"><i class="fas fa-briefcase"></i> C.E.B.A.S.</li>
         <li class="svThumb ytVideo" data-videoID="O91moIwSS-4"><i class="fas fa-briefcase"></i> Football Championship (intro)</li>
         <li class="svThumb ytVideo" data-videoID="vgYDsnDXRDc"><i class="fas fa-briefcase"></i> Football Championship (awards)</li>
-        <li class="svThumb ytVideo" data-videoID="AQOH3AmoY2w"><i class="fas fa-briefcase"></i> Football Championship (line up)</li>
         <li class="svThumb ytVideo" data-videoID="KjG0p2JXuNA"><i class="fas fa-briefcase"></i> Football Championship (gallery)</li>
-        <li class="svThumb ytVideo" data-videoID="_Yv57vQXnXY"><i class="fas fa-briefcase"></i> Football Championship (jumbotron)</li>
-        <li class="svThumb ytVideo" data-videoID="j9viftr3JMs"><i class="fas fa-briefcase"></i> Football Championship (match up)</li>
-        <li class="svThumb ytVideo" data-videoID="qUc7S5BjfKI"><i class="fas fa-graduation-cap"></i> Mochila Inteligente (simulation)</li>
-        <li class="svThumb ytVideo" data-videoID="zKbmJ9qKJr4"><i class="fas fa-graduation-cap"></i> Mochila Inteligente (explanation)</li>
+        <li class="svThumb ytVideo" data-videoID="qUc7S5BjfKI"><i class="fas fa-graduation-cap"></i> Smart Backpack (simulation)</li>
+        <li class="svThumb ytVideo" data-videoID="zKbmJ9qKJr4"><i class="fas fa-graduation-cap"></i> Smart Backpack (explanation)</li>
         <li class="svThumb ytVideo" data-videoID="Z78uw3me8II"><i class="fas fa-graduation-cap"></i> Bike Adiante</li>
         <li class="svThumb ytVideo" data-videoID="uWwZxoTP6hQ"><i class="fas fa-graduation-cap"></i> GambiTech</li>
         <li class="svThumb ytVideo" data-videoID="smo0h0rUeTE"><i class="fas fa-graduation-cap"></i> Saga (sonorization)</li>

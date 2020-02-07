@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hi, I'm a Interaction Designer - Welcome to my site. Enjoy!</title>
-    <meta name="description" content="This is my personal website and portfolio. I'm a digital designer, my line of work consists mainly of video production, user experience, web and mobile related projects.">
+    <meta name="description" content="This is my personal website and portfolio. I'm a VFX Artist, and I create specially real time VFX. I also know my way around motion design and video editing.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Alexandre Gomide da Silva Mello">
 
@@ -34,7 +34,7 @@
                 <img src="img/sobre/profile-pic-web.jpg" alt="my profile photo">
                 <article id="main">
                     <h1>My name is <strong>Alexandre Gomide</strong></h1>
-                    <h2>and I'm a <span class="highlight">Video Editor & Motion Designer</span></h2>
+                    <h2>and I'm a <span class="highlight">VFX Artist & Motion Designer</span></h2>
                 </article>
             </div>
 
@@ -83,7 +83,7 @@
 
                 <section class="work-filter repertoire">
                 <div id="latest-creation" class="check-out">
-                    <a href="https://youtu.be/je_eVI1s5rc" target="_blank"><span><i class="fas fa-briefcase fa-lg fa-fw"></i></span>
+                    <a href="https://youtu.be/nh-UBLJG-UE" target="_blank"><span><i class="fas fa-briefcase fa-lg fa-fw"></i></span>
                         <h3>Latest Creation</h3></a>
                 </div>
                 <div id="reading" class="check-out">

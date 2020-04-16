@@ -33,7 +33,7 @@
             <div id="painel-top">
                 <img src="img/sobre/profile-pic-web.jpg" alt="my profile photo">
                 <article id="main">
-                    <h1>My name is <strong>Alexandre Gomide</strong></h1>
+                    <h1>My name is <strong>Alexandre Mello</strong></h1>
                     <h2>and I'm a <span class="highlight">VFX Artist & Motion Designer</span></h2>
                 </article>
             </div>
@@ -47,7 +47,7 @@
                     <p><strong class="highlight">_</strong>Full-Time VFX Student (2019/2020)<strong class="highlight"> :Nowadays</strong></p>
                     <p><strong class="highlight">_</strong>Bachelor of Design (PUC-Rio/2016)<strong class="highlight"> :Education</strong></p>
                     <p><strong class="highlight">_</strong>CCEAD PUC-Rio (Jul/2017 - Jul/2019)<strong class="highlight"> :Past Experiences</strong></p>
-                    <p><strong class="highlight">_</strong>SESC - Departamento Nacional (Mar/2015 - Sep/2015)</p>
+                    <p><strong class="highlight">_</strong>SESC - National Department (Mar/2015 - Sep/2015)</p>
                     <p><strong class="highlight">_</strong>Ontario - Canada<strong class="highlight"> :Location</strong></p>
                     <p><strong class="highlight">_</strong>Portuguese (born and raised)<strong class="highlight"> :Languages</strong></p>
                     <p><strong class="highlight">_</strong>English (solid as a rock)</p>
@@ -62,7 +62,7 @@
                     <p>Bachelor of Design (PUC-Rio/2016)</p>
                     <h3><strong class="highlight">_Past Experiences</strong></h3>
                     <p>CCEAD PUC-Rio (Jul/2017 - Jul/2019)</p>
-                    <p>SESC - Departamento Nacional (Mar/2015 - Sep/2015)</p>
+                    <p>SESC - National Department (Mar/2015 - Sep/2015)</p>
                     <h3><strong class="highlight">_Location</strong></h3>
                     <p>Ontario - Canada</p>
                     <h3><strong class="highlight">_Languages</strong></h3>
@@ -83,7 +83,7 @@
 
                 <section class="work-filter repertoire">
                 <div id="latest-creation" class="check-out">
-                    <a href="https://youtu.be/nh-UBLJG-UE" target="_blank"><span><i class="fas fa-briefcase fa-lg fa-fw"></i></span>
+                    <a href="https://youtu.be/C4Po4rObP_Y" target="_blank"><span><i class="fas fa-briefcase fa-lg fa-fw"></i></span>
                         <h3>Latest Creation</h3></a>
                 </div>
                 <div id="reading" class="check-out">

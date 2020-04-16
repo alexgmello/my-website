@@ -25,6 +25,6 @@
                 </div>
             </article>
 
-            <p><i class="far fa-copyright"></i> 2019 <a href="https://alexgmello.com/" class="external-link">Alexandre Gomide</a> - All rights reserved</p>
+            <p><i class="far fa-copyright"></i> 2020 <a href="https://alexgmello.com/" class="external-link">Alexandre Mello</a> - All rights reserved</p>
         </div>
     </footer>

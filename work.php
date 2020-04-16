@@ -173,7 +173,8 @@
     <!-- MEDIA -->
     <section class="media">
     <ul id="svList">
-        <li class="svThumb ytVideo" data-videoID="C4Po4rObP_Y"><i class="fas fa-briefcase"></i> VFX Reel 2019/2020</li>
+        <li class="svThumb ytVideo" data-videoID="C4Po4rObP_Y"><i class="fas fa-graduation-cap"></i> VFX Reel 2019/2020</li>
+        <li class="svThumb ytVideo" data-videoID="X-Qd8yZacP4"><i class="fas fa-graduation-cap"></i> The 4 Elements</li>
         <li class="svThumb ytVideo" data-videoID="nh-UBLJG-UE"><i class="fas fa-graduation-cap"></i> VFX Short</li>
         <li class="svThumb ytVideo" data-videoID="mIZYGGJLPQM"><i class="fas fa-graduation-cap"></i> CGI Comps</li>
         <li class="svThumb ytVideo" data-videoID="nUJehucopnM"><i class="fas fa-graduation-cap"></i> Camera Tracking Comps</li>

@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hi, I'm a Interaction Designer - Welcome to my site. Enjoy!</title>
+    <title>Hi, I'm a VFX Artist - Welcome to my site. Enjoy!</title>
     <meta name="description" content="This is my personal website and portfolio. I'm a VFX Artist, and I create specially real time VFX. I also know my way around motion design and video editing.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Alexandre Gomide da Silva Mello">

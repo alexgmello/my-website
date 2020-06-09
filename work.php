@@ -177,6 +177,12 @@
         <li class="svThumb ytVideo" data-videoID="X-Qd8yZacP4"><i class="fas fa-graduation-cap"></i> The 4 Elements</li>
         <li class="svThumb ytVideo" data-videoID="nh-UBLJG-UE"><i class="fas fa-graduation-cap"></i> VFX Short</li>
         <li class="svThumb ytVideo" data-videoID="mIZYGGJLPQM"><i class="fas fa-graduation-cap"></i> CGI Comps</li>
+        <li class="svThumb ytVideo" data-videoID="OaqAJpWko34"><i class="fas fa-graduation-cap"></i> Assembling For Dummies</li>
+        <li class="svThumb ytVideo" data-videoID="QQ7Q7gLUe50"><i class="fas fa-graduation-cap"></i> Program Commercial</li>
+        <li class="svThumb ytVideo" data-videoID="DQ8krpIWU0E"><i class="fas fa-graduation-cap"></i> Knights in 5</li>
+        <li class="svThumb ytVideo" data-videoID="3aUiLRcpo_k"><i class="fas fa-graduation-cap"></i> Short Montage</li>
+        <li class="svThumb ytVideo" data-videoID="elfqlwS0SYQ"><i class="fas fa-graduation-cap"></i> Live Concert</li>
+        <li class="svThumb ytVideo" data-videoID="XlyOqp69HdE"><i class="fas fa-graduation-cap"></i> "The Graduated" Trailer</li>
         <li class="svThumb ytVideo" data-videoID="nUJehucopnM"><i class="fas fa-graduation-cap"></i> Camera Tracking Comps</li>
         <li class="svThumb ytVideo" data-videoID="je_eVI1s5rc"><i class="fas fa-briefcase"></i> C.E.B.A.S.</li>
         <li class="svThumb ytVideo" data-videoID="O91moIwSS-4"><i class="fas fa-briefcase"></i> Football Championship (intro)</li>
@@ -188,7 +194,7 @@
         <li class="svThumb ytVideo" data-videoID="uWwZxoTP6hQ"><i class="fas fa-graduation-cap"></i> GambiTech</li>
         <li class="svThumb ytVideo" data-videoID="smo0h0rUeTE"><i class="fas fa-graduation-cap"></i> Saga (sonorization)</li>
         <li class="svThumb ytVideo" data-videoID="Sa7bc6CMEkw"><i class="fas fa-graduation-cap"></i> Blah!</li>
-        <li class="svThumb ytVideo" data-videoID="n8iirRcNKAk"><i class="fas fa-graduation-cap"></i> Um Dia Descontínuo</li>
+        <li class="svThumb ytVideo" data-videoID="n8iirRcNKAk"><i class="fas fa-graduation-cap"></i> A Discontinuous Day</li>
     </ul>
     <!-- FOOTER -->
     <?php include "footer.php" ?>

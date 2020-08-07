@@ -41,7 +41,7 @@
             <div id="painel-mid">
                 <div id="infos">
                     <p><strong class="highlight">_</strong>Hi there, nice to see you here. As I said before, I'm Alexandre and I work as a Digital Designer, in my case this means that I'm a <strong class="highlight">VFX Artist</strong> and a <strong class="highlight">Motion Designer</strong> and also a <strong class="highlight">Video Editor</strong>.</p>
-                    <p><strong class="highlight">_</strong>For the time being I'm living in <strong class="highlight">London (Ontario, CA)</strong>, but I'm currently looking for opportunities from all over Canada, it doesn't matter if that means moving to another place. I'm going to wherever life takes me.</p>
+                    <p><strong class="highlight">_</strong>For the time being I'm living in <strong class="highlight">Montréal (Québec, CA)</strong>, but I'm currently looking for opportunities from all over Canada, it doesn't matter if that means moving to another place. I'm going to wherever life takes me.</p>
                 </div>
                 <div id="detalhes">
                     <!-- NOWADAYS -->
@@ -56,7 +56,7 @@
                     <p><strong class="highlight">_</strong>SESC - National Department (Mar/2015 - Sep/2015)</p>
 
                     <!-- LOCATION -->
-                    <p><strong class="highlight">_</strong>Ontario - Canada<strong class="highlight"> :Location</strong></p>
+                    <p><strong class="highlight">_</strong>Montréal - Canada<strong class="highlight"> :Location</strong></p>
 
                     <!-- LANGUAGES -->
                     <p><strong class="highlight">_</strong>Portuguese (born and raised)<strong class="highlight"> :Languages</strong></p>
@@ -86,7 +86,7 @@
 
                     <!-- LOCATION -->
                     <h3><strong class="highlight">_Location</strong></h3>
-                    <p>Ontario - Canada</p>
+                    <p>Montréal - Canada</p>
 
                     <!-- LANGUAGES -->
                     <h3><strong class="highlight">_Languages</strong></h3>
